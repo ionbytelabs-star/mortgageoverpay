@@ -21,9 +21,9 @@ import { PAGE_COPY } from "@/content/pageCopy"
 import { STRAPLINE } from "@/lib/constants"
 
 export const metadata = buildMetadata({
-  title: "UK Mortgage Overpayment Calculator and Guides | Mortgage Overpay",
+  title: "UK Mortgage Overpayment Calculator | Mortgage Overpay",
   description:
-    "See how UK mortgage overpayments could change your mortgage-free date, interest paid, and total term with instant estimates and practical supporting guides.",
+    "Use this UK mortgage overpayment calculator to estimate your mortgage-free date, interest saved, and the impact of extra payments with instant answers.",
   path: ROUTES.home,
 })
 
@@ -35,9 +35,9 @@ export default function HomePage() {
       <JsonLd data={websiteSchema()} />
       <JsonLd
         data={webPageSchema({
-          title: "UK Mortgage Overpayment Calculator and Guides | Mortgage Overpay",
+          title: "UK Mortgage Overpayment Calculator | Mortgage Overpay",
           description:
-            "See how UK mortgage overpayments could change your mortgage-free date, interest paid, and total term with instant estimates and practical supporting guides.",
+            "Use this UK mortgage overpayment calculator to estimate your mortgage-free date, interest saved, and the impact of extra payments with instant answers.",
           path: ROUTES.home,
         })}
       />
@@ -55,6 +55,9 @@ export default function HomePage() {
                   {PAGE_COPY.home.title}
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-slate-600">{PAGE_COPY.home.intro}</p>
+                <p className="max-w-2xl text-sm leading-7 text-slate-500 sm:text-base">
+                  Designed for UK repayment mortgages, it helps you estimate time saved, interest saved, and how soon you could become mortgage-free.
+                </p>
                 <p className="max-w-2xl text-base leading-7 text-slate-500">{STRAPLINE}</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -71,7 +74,17 @@ export default function HomePage() {
                   See how it works
                 </Link>
               </div>
-              <DirectAnswer answer={PAGE_COPY.home.directAnswer} />
+              <div className="space-y-4">
+                <DirectAnswer title="UK mortgage overpayment calculator" answer={PAGE_COPY.home.directAnswer} />
+                <ul className="space-y-3 rounded-[2rem] border border-slate-200 bg-white px-5 py-5 text-sm leading-6 text-slate-700">
+                  {PAGE_COPY.home.keyPoints.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-teal-700" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <BenefitsRow />
             </div>
 
@@ -83,10 +96,10 @@ export default function HomePage() {
       </section>
 
       <Section className="pt-0">
-        <AdPlaceholder label="Reserved banner placement below homepage hero" />
+        <AdPlaceholder label="Reserved banner placement below homepage hero" hideLabel />
       </Section>
 
-      <Section title="Useful next steps" description="Choose the page that best matches the question you want to answer next.">
+      <Section title="Useful next steps" description="Choose the page that best matches the mortgage overpayment question you want to answer next.">
         <InternalLinkBlock
           title="Start with the right page"
           links={[
@@ -100,7 +113,7 @@ export default function HomePage() {
 
       <Section
         title="How it works"
-        description="The journey is designed to stay simple on a phone and clear on a larger screen."
+        description="A simple calculator journey for checking overpayments, interest saved, and your mortgage-free date."
         className="scroll-mt-24"
       >
         <div id="how-it-works" className="grid gap-4">
@@ -123,7 +136,7 @@ export default function HomePage() {
       <ComparisonSection />
 
       <Section title="Plain-English trust note" description="Clear scope, calm tone, and no pressure.">
-        <TrustNote />
+        <TrustNote children="This calculator gives estimates based on a UK repayment mortgage model. Your lender terms, overpayment limits, and charges may differ, so it is worth checking your own mortgage details before acting." />
       </Section>
 
       <FAQSection items={homeFaqs} />

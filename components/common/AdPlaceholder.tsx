@@ -1,11 +1,13 @@
 type AdPlaceholderProps = {
   label?: string
   variant?: "banner" | "rectangle"
+  hideLabel?: boolean
 }
 
 export function AdPlaceholder({
   label = "Reserved advert placement",
   variant = "banner",
+  hideLabel = false,
 }: AdPlaceholderProps) {
   return (
     <div
@@ -14,7 +16,7 @@ export function AdPlaceholder({
         variant === "banner" ? "py-7" : "py-10"
       }`}
     >
-      <span className="uppercase tracking-[0.18em] text-slate-400/90">{label}</span>
+      {!hideLabel ? <span className="uppercase tracking-[0.18em] text-slate-400/90">{label}</span> : null}
     </div>
   )
 }
