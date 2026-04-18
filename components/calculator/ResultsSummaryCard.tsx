@@ -22,13 +22,13 @@ export function ResultsSummaryCard({ result }: ResultsSummaryCardProps) {
         </div>
         <div className="rounded-3xl bg-white/6 px-4 py-4">
           <p className="text-xs uppercase tracking-[0.2em] text-slate-400">New payoff date</p>
-          <p className="mt-2 text-2xl font-semibold text-white">
+          <p className="mt-2 whitespace-nowrap text-xl font-semibold text-white sm:text-2xl">
             {new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(result.overpayment.payoffDate)}
           </p>
         </div>
         <div className="rounded-3xl bg-white/6 px-4 py-4">
           <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Original payoff date</p>
-          <p className="mt-2 text-2xl font-semibold text-white">
+          <p className="mt-2 whitespace-nowrap text-xl font-semibold text-white sm:text-2xl">
             {new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(result.original.payoffDate)}
           </p>
         </div>
