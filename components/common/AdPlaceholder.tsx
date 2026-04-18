@@ -10,17 +10,11 @@ export function AdPlaceholder({
   return (
     <div
       aria-label={label}
-      className={`rounded-[2rem] border-2 border-dashed border-slate-300 bg-slate-100/80 px-4 text-center text-sm text-slate-600 ${
-        variant === "banner" ? "py-10" : "py-16"
+      className={`rounded-[2rem] border border-dashed border-slate-200 bg-slate-50/55 px-4 text-center text-xs text-slate-400 ${
+        variant === "banner" ? "py-7" : "py-10"
       }`}
     >
-      <div className="space-y-2">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Advert placeholder</p>
-        <p className="font-medium">{label}</p>
-        <p className="text-xs text-slate-500">
-          {variant === "banner" ? "Suggested leaderboard slot" : "Suggested in-content rectangle slot"}
-        </p>
-      </div>
+      <span className="uppercase tracking-[0.18em] text-slate-400/90">{label}</span>
     </div>
   )
 }

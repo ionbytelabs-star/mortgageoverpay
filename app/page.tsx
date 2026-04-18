@@ -71,6 +71,7 @@ export default function HomePage() {
                   See how it works
                 </Link>
               </div>
+              <DirectAnswer answer={PAGE_COPY.home.directAnswer} />
               <BenefitsRow />
             </div>
 
@@ -85,19 +86,16 @@ export default function HomePage() {
         <AdPlaceholder label="Reserved banner placement below homepage hero" />
       </Section>
 
-      <Section title="What the tool does" description="A clear, direct answer before you scroll any further.">
-        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <DirectAnswer answer={PAGE_COPY.home.directAnswer} />
-          <InternalLinkBlock
-            title="Start with the right page"
-            links={[
-              { href: ROUTES.calculator, label: "Use the UK mortgage overpayment calculator" },
-              { href: ROUTES.shouldIOverpay, label: "Read should I overpay my mortgage?" },
-              { href: ROUTES.overpaymentLimit, label: "Read about mortgage overpayment limits in the UK" },
-              { href: ROUTES.payOffEarly, label: "Read how to pay off your mortgage early" },
-            ]}
-          />
-        </div>
+      <Section title="Useful next steps" description="Choose the page that best matches the question you want to answer next.">
+        <InternalLinkBlock
+          title="Start with the right page"
+          links={[
+            { href: ROUTES.calculator, label: "Use the UK mortgage overpayment calculator" },
+            { href: ROUTES.shouldIOverpay, label: "Read should I overpay my mortgage?" },
+            { href: ROUTES.overpaymentLimit, label: "Read about mortgage overpayment limits in the UK" },
+            { href: ROUTES.payOffEarly, label: "Read how to pay off your mortgage early" },
+          ]}
+        />
       </Section>
 
       <Section
@@ -123,18 +121,6 @@ export default function HomePage() {
       </Section>
 
       <ComparisonSection />
-
-      <Section title="Useful next reads" description="Quick supporting guides for the most common mortgage overpayment questions.">
-        <InternalLinkBlock
-          title="Explore the guides"
-          links={[
-            { href: ROUTES.calculator, label: "Open the mortgage overpayment calculator" },
-            { href: ROUTES.shouldIOverpay, label: "Should I overpay my mortgage?" },
-            { href: ROUTES.overpaymentLimit, label: "Mortgage overpayment limits in the UK" },
-            { href: ROUTES.payOffEarly, label: "How to pay off your mortgage early" },
-          ]}
-        />
-      </Section>
 
       <Section title="Plain-English trust note" description="Clear scope, calm tone, and no pressure.">
         <TrustNote />

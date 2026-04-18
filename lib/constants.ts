@@ -16,4 +16,4 @@ export const DESIGN_TOKENS = {
 }
 
 export const CONTENT_NOTE =
-  "This calculator gives estimates using a simplified repayment mortgage model. Your lender terms, overpayment rules, and individual circumstances may differ, so it is worth checking your own mortgage details before acting."
+  "This calculator gives estimates using a UK repayment mortgage model with standard repayment assumptions. Your lender terms, overpayment rules, and personal circumstances may differ, so it is worth checking your own mortgage details before acting."

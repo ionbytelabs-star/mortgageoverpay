@@ -91,22 +91,25 @@ export default function CalculatorPage() {
         title="What to check before overpaying"
         description="Keep the result practical by checking a few real-world details before you act."
       >
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
             "Whether your mortgage allows regular or one-off overpayments",
             "What the typical UK overpayment limit is in your mortgage terms",
             "Whether an early repayment charge could apply",
             "Whether emergency savings should come first for flexibility",
           ].map((item) => (
-            <article key={item} className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-700">
-              {item}
-            </article>
+            <li key={item} className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-700">
+              <span className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-teal-700" />
+                <span>{item}</span>
+              </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </Section>
 
       <Section title="Useful next steps" description="Use the guides below to sense-check the result and plan the next step.">
-        <InternalLinkBlock title="Related guides" links={PAGE_COPY.calculator.relatedLinks} />
+        <InternalLinkBlock links={PAGE_COPY.calculator.relatedLinks} />
       </Section>
 
       <Section title="Important note" description="Keep the result practical and grounded.">

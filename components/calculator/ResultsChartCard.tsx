@@ -74,8 +74,9 @@ export function ResultsChartCard({ data }: ResultsChartCardProps) {
             </AreaChart>
           </ResponsiveContainer>
         ) : (
-          <div className="flex h-full items-center justify-center rounded-3xl bg-slate-50 text-sm text-slate-500">
-            Loading chart…
+          <div className="flex h-full items-center justify-center rounded-3xl bg-slate-50 px-6 text-center text-sm leading-6 text-slate-500">
+            This chart compares the mortgage balance with and without overpayments, so you can see how a faster balance
+            drop can reduce interest over time.
           </div>
         )}
       </div>

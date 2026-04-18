@@ -78,17 +78,20 @@ export default function OverpaymentLimitPage() {
       </Section>
 
       <Section title="What to check before you pay extra" description="A quick checklist can prevent the wrong kind of overpayment.">
-        <div className="grid gap-4 md:grid-cols-3">
+        <ul className="grid gap-4 md:grid-cols-3">
           {[
             "How much extra can be paid within the current allowance",
             "Whether a one-off lump sum is treated differently from a monthly overpayment",
             "Whether the lender reduces the term, the monthly payment, or offers a choice",
           ].map((item) => (
-            <article key={item} className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-700">
-              {item}
-            </article>
+            <li key={item} className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-700">
+              <span className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-teal-700" />
+                <span>{item}</span>
+              </span>
+            </li>
           ))}
-        </div>
+        </ul>
         <p className="mt-4 text-sm leading-7 text-slate-600">
           After checking the wording, you can use the <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.calculator}>mortgage overpayment calculator</Link> to estimate what a monthly overpayment or lump sum could change in practice.
         </p>

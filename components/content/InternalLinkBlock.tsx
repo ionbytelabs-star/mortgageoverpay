@@ -5,11 +5,11 @@ type InternalLinkBlockProps = {
   links: ReadonlyArray<{ href: string; label: string }>
 }
 
-export function InternalLinkBlock({ title = "Related pages", links }: InternalLinkBlockProps) {
+export function InternalLinkBlock({ title, links }: InternalLinkBlockProps) {
   return (
     <aside className="card rounded-[2rem] px-5 py-5">
-      <h2 className="text-lg font-semibold text-slate-950">{title}</h2>
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+      {title ? <h2 className="text-lg font-semibold text-slate-950">{title}</h2> : null}
+      <div className={`${title ? "mt-4" : ""} grid gap-3 sm:grid-cols-2`}>
         {links.map((link) => (
           <Link
             key={link.href}
