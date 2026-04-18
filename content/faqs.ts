@@ -35,6 +35,11 @@ export const FAQS_BY_PAGE = {
       answer:
         "Early Repayment Charges (ERCs) are fees some lenders apply if you repay more than your allowed overpayment limit or pay off your mortgage early. These charges are typically a percentage of the amount overpaid and are most common during fixed or discounted rate periods. Checking for ERCs before overpaying is essential to avoid reducing or cancelling out your potential savings.",
     },
+    {
+      question: "Can I overpay my mortgage with a credit card?",
+      answer:
+        "Most UK mortgage lenders do not allow direct payments from a credit card, so you usually cannot overpay your mortgage this way. While some people use credit cards to manage cash flow temporarily, this can lead to higher interest costs and added financial risk. In most cases, it is safer to make overpayments directly from savings or income rather than borrowing to reduce your mortgage balance.",
+    },
   ],
   calculator: [
     {

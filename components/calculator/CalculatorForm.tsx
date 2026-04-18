@@ -20,7 +20,7 @@ const fields: Array<{
     key: "balance",
     label: "Current mortgage balance",
     hint: "Remaining balance today",
-    prefix: "£",
+    prefix: "GBP",
     step: "1000",
   },
   {
@@ -41,7 +41,7 @@ const fields: Array<{
     key: "monthlyPayment",
     label: "Current monthly payment",
     hint: "Optional. Leave blank to estimate it",
-    prefix: "£",
+    prefix: "GBP",
     step: "1",
     optional: true,
   },
@@ -49,14 +49,14 @@ const fields: Array<{
     key: "monthlyOverpayment",
     label: "Monthly overpayment",
     hint: "Extra amount paid each month",
-    prefix: "£",
+    prefix: "GBP",
     step: "1",
   },
   {
     key: "lumpSum",
     label: "One-off lump sum overpayment",
     hint: "Optional extra payment made now",
-    prefix: "£",
+    prefix: "GBP",
     step: "1",
     optional: true,
   },
@@ -89,7 +89,7 @@ export function CalculatorForm({ values, onChange }: CalculatorFormProps) {
               value={values[field.key]}
               onChange={handleChange(field.key)}
               className={`focus-ring min-h-12 w-full rounded-2xl border border-slate-200 bg-white pr-4 text-base text-slate-950 placeholder:text-slate-400 ${
-                field.prefix ? "pl-8" : "pl-4"
+                field.prefix ? "pl-12" : "pl-4"
               }`}
               placeholder={field.optional ? "Leave blank or enter a value" : ""}
               aria-label={field.label}
