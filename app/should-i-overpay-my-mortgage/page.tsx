@@ -45,18 +45,18 @@ export default function ShouldIOverpayPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <Section className="pt-6">
+      <Section className="pt-6" compact>
         <PageIntro title={PAGE_COPY.shouldIOverpay.title} intro={PAGE_COPY.shouldIOverpay.intro} />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <DirectAnswer answer={PAGE_COPY.shouldIOverpay.directAnswer} />
           <KeyPointsList items={PAGE_COPY.shouldIOverpay.keyPoints} />
         </div>
       </Section>
 
-      <Section title="What usually matters most?" description="The best answer is often more about priorities than formulas.">
+      <Section title="What usually matters most?" description="The best answer is often more about priorities than formulas." compact>
         <div className="grid gap-4 lg:grid-cols-2">
           <article className="card rounded-[2rem] px-5 py-5">
             <h2 className="text-lg font-semibold text-slate-950">Overpaying may suit you when</h2>
@@ -85,11 +85,11 @@ export default function ShouldIOverpayPage() {
         </div>
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <AdPlaceholder label="Reserved banner placement after the first major supporting section" />
       </Section>
 
-      <Section title="Helpful next steps" description="Move from a general decision to a more specific plan.">
+      <Section title="Helpful next steps" description="Move from a general decision to a more specific plan." compact>
         <InternalLinkBlock
           links={[
             { href: ROUTES.calculator, label: "Use the mortgage overpayment calculator" },
@@ -99,22 +99,23 @@ export default function ShouldIOverpayPage() {
         />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <AdPlaceholder
           label="Optional lower-page advert placement on a longer supporting guide"
           variant="rectangle"
         />
       </Section>
 
-      <Section title="Clear limitation" description="A good result still needs a final sense-check.">
+      <Section title="Clear limitation" description="A good result still needs a final sense-check." compact>
         <TrustNote children="Whether overpaying is right for you depends on your own mortgage terms, cash buffer, and wider priorities. This page explains the trade-offs and should be read as guidance, not a one-size-fits-all answer." />
       </Section>
 
-      <FAQSection items={faqs} />
+      <FAQSection items={faqs} compact />
 
       <CTASection
         title="Compare the numbers with your own figures"
         description="If you are weighing overpaying against other options, the calculator gives you a practical answer to compare."
+        compact
       />
     </>
   )

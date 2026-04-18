@@ -46,24 +46,25 @@ export default function CalculatorPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <Section className="pt-6">
+      <Section className="pt-6" compact>
         <PageIntro title={PAGE_COPY.calculator.title} intro={PAGE_COPY.calculator.intro} />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <DirectAnswer answer={PAGE_COPY.calculator.directAnswer} />
           <KeyPointsList title="What you can learn quickly" items={PAGE_COPY.calculator.keyPoints} />
         </div>
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <MortgageCalculator />
       </Section>
 
       <Section
         title="How mortgage overpayments work"
         description="A short summary of what changes when you pay extra towards a UK repayment mortgage."
+        compact
       >
         <div className="grid gap-4 lg:grid-cols-3">
           <article className="card rounded-[2rem] px-5 py-5">
@@ -90,6 +91,7 @@ export default function CalculatorPage() {
       <Section
         title="What to check before overpaying"
         description="Keep the result practical by checking a few real-world details before you act."
+        compact
       >
         <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
@@ -108,19 +110,24 @@ export default function CalculatorPage() {
         </ul>
       </Section>
 
-      <Section title="Useful next steps" description="Use the guides below to sense-check the result and plan the next step.">
+      <Section
+        title="Useful next steps"
+        description="Use the guides below to sense-check the result and plan the next step."
+        compact
+      >
         <InternalLinkBlock links={PAGE_COPY.calculator.relatedLinks} />
       </Section>
 
-      <Section title="Important note" description="Keep the result practical and grounded.">
+      <Section title="Important note" description="Keep the result practical and grounded." compact>
         <TrustNote children="This calculator gives estimates for a UK repayment mortgage using the figures you enter. Your lender terms, overpayment limits, charges, and individual circumstances may differ." />
       </Section>
 
-      <FAQSection items={faqs} />
+      <FAQSection items={faqs} compact />
 
       <CTASection
         title="Test another overpayment scenario"
         description="Try a lower or higher monthly overpayment, add a lump sum, and compare the result without losing your place."
+        compact
       />
     </>
   )

@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}${ROUTES.payOffEarly}`, lastModified: now, changeFrequency: "monthly", priority: 0.81 },
     { url: `${SITE_URL}${ROUTES.about}`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE_URL}${ROUTES.privacy}`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${SITE_URL}${ROUTES.cookies}`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE_URL}${ROUTES.terms}`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ]
 }

@@ -6,6 +6,7 @@ export const ROUTES = {
   payOffEarly: "/pay-off-mortgage-early",
   about: "/about",
   privacy: "/privacy",
+  cookies: "/cookies",
   terms: "/terms",
 } as const
 
@@ -23,5 +24,6 @@ export const FOOTER_NAV = [
   { href: ROUTES.payOffEarly, label: "Pay off mortgage early" },
   { href: ROUTES.about, label: "About" },
   { href: ROUTES.privacy, label: "Privacy" },
+  { href: ROUTES.cookies, label: "Cookies" },
   { href: ROUTES.terms, label: "Terms" },
 ]

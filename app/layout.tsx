@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 
+import { CookieConsentBanner } from "@/components/common/CookieConsentBanner"
 import { Footer } from "@/components/layout/Footer"
 import { Header } from "@/components/layout/Header"
 import { defaultMetadata } from "@/lib/metadata"
@@ -21,6 +22,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           {/* Future privacy-conscious analytics can be inserted here once the privacy page is expanded. */}
           <Footer />
+          <CookieConsentBanner />
         </div>
       </body>
     </html>

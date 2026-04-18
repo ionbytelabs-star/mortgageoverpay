@@ -17,3 +17,5 @@ export const DESIGN_TOKENS = {
 
 export const CONTENT_NOTE =
   "This calculator gives estimates using a UK repayment mortgage model with standard repayment assumptions. Your lender terms, overpayment rules, and personal circumstances may differ, so it is worth checking your own mortgage details before acting."
+
+export const COOKIE_CONSENT_STORAGE_KEY = "mortgage-overpay-cookie-consent"

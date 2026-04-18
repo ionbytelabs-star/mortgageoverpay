@@ -6,15 +6,17 @@ type FAQSectionProps = {
   items: ReadonlyArray<FAQItem>
   title?: string
   description?: string
+  compact?: boolean
 }
 
 export function FAQSection({
   items,
   title = "Frequently asked questions",
   description = "Straight answers to the questions people usually ask before making an overpayment.",
+  compact = false,
 }: FAQSectionProps) {
   return (
-    <Section title={title} description={description}>
+    <Section title={title} description={description} compact={compact}>
       <div className="space-y-4">
         {items.map((item) => (
           <details key={item.question} className="card rounded-3xl px-5 py-4">

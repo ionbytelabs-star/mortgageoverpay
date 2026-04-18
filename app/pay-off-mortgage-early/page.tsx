@@ -45,18 +45,18 @@ export default function PayOffEarlyPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <Section className="pt-6">
+      <Section className="pt-6" compact>
         <PageIntro title={PAGE_COPY.payOffEarly.title} intro={PAGE_COPY.payOffEarly.intro} />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <DirectAnswer answer={PAGE_COPY.payOffEarly.directAnswer} />
           <KeyPointsList items={PAGE_COPY.payOffEarly.keyPoints} />
         </div>
       </Section>
 
-      <Section title="Practical ways to reduce the term" description="Most early payoff plans come down to a few simple levers.">
+      <Section title="Practical ways to reduce the term" description="Most early payoff plans come down to a few simple levers." compact>
         <div className="grid gap-4 lg:grid-cols-3">
           {[
             {
@@ -80,11 +80,15 @@ export default function PayOffEarlyPage() {
         </div>
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <AdPlaceholder label="Reserved banner placement after the first major supporting section" />
       </Section>
 
-      <Section title="What makes a plan workable?" description="The goal is not just to pay early. It is to pay early without creating unnecessary pressure.">
+      <Section
+        title="What makes a plan workable?"
+        description="The goal is not just to pay early. It is to pay early without creating unnecessary pressure."
+        compact
+      >
         <div className="grid gap-4 lg:grid-cols-2">
           <article className="card rounded-[2rem] px-5 py-5">
             <h2 className="text-lg font-semibold text-slate-950">Keep enough flexibility</h2>
@@ -101,7 +105,7 @@ export default function PayOffEarlyPage() {
         </div>
       </Section>
 
-      <Section title="Related pages" description="Build the plan, then test it with your own numbers.">
+      <Section title="Related pages" description="Build the plan, then test it with your own numbers." compact>
         <InternalLinkBlock
           links={[
             { href: ROUTES.calculator, label: "Use the mortgage overpayment calculator" },
@@ -111,22 +115,23 @@ export default function PayOffEarlyPage() {
         />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <AdPlaceholder
           label="Optional lower-page advert placement on a longer supporting guide"
           variant="rectangle"
         />
       </Section>
 
-      <Section title="Limitation" description="A projection is useful, but your exact mortgage terms still come first.">
+      <Section title="Limitation" description="A projection is useful, but your exact mortgage terms still come first." compact>
         <TrustNote children="Paying off a mortgage early can be a strong long-term goal, but the right pace depends on affordability, flexibility, and any limits or charges in your own mortgage terms. Use estimates as a guide, then check the exact details." />
       </Section>
 
-      <FAQSection items={faqs} />
+      <FAQSection items={faqs} compact />
 
       <CTASection
         title="See how quickly your own mortgage could move"
         description="Test a regular overpayment or a one-off lump sum and compare the change in payoff date and interest paid."
+        compact
       />
     </>
   )

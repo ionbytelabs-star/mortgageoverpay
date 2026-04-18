@@ -45,18 +45,22 @@ export default function OverpaymentLimitPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <Section className="pt-6">
+      <Section className="pt-6" compact>
         <PageIntro title={PAGE_COPY.overpaymentLimit.title} intro={PAGE_COPY.overpaymentLimit.intro} />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <DirectAnswer answer={PAGE_COPY.overpaymentLimit.directAnswer} />
           <KeyPointsList items={PAGE_COPY.overpaymentLimit.keyPoints} />
         </div>
       </Section>
 
-      <Section title="Why limits matter" description="A good overpayment plan is not just about savings. It also has to fit the mortgage terms.">
+      <Section
+        title="Why limits matter"
+        description="A good overpayment plan is not just about savings. It also has to fit the mortgage terms."
+        compact
+      >
         <div className="grid gap-4 lg:grid-cols-2">
           <article className="card rounded-[2rem] px-5 py-5">
             <h2 className="text-lg font-semibold text-slate-950">What an overpayment limit does</h2>
@@ -73,11 +77,11 @@ export default function OverpaymentLimitPage() {
         </div>
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <AdPlaceholder label="Reserved banner placement after the first major supporting section" />
       </Section>
 
-      <Section title="What to check before you pay extra" description="A quick checklist can prevent the wrong kind of overpayment.">
+      <Section title="What to check before you pay extra" description="A quick checklist can prevent the wrong kind of overpayment." compact>
         <ul className="grid gap-4 md:grid-cols-3">
           {[
             "How much extra can be paid within the current allowance",
@@ -97,7 +101,7 @@ export default function OverpaymentLimitPage() {
         </p>
       </Section>
 
-      <Section title="Related pages" description="Use the calculator, then sense-check the result against your mortgage terms.">
+      <Section title="Related pages" description="Use the calculator, then sense-check the result against your mortgage terms." compact>
         <InternalLinkBlock
           links={[
             { href: ROUTES.calculator, label: "Use the mortgage overpayment calculator" },
@@ -107,22 +111,23 @@ export default function OverpaymentLimitPage() {
         />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0" compact>
         <AdPlaceholder
           label="Optional lower-page advert placement on a longer supporting guide"
           variant="rectangle"
         />
       </Section>
 
-      <Section title="Calm trust note" description="General guidance still needs your own paperwork.">
+      <Section title="Calm trust note" description="General guidance still needs your own paperwork." compact>
         <TrustNote children="This guide explains how overpayment limits usually work in principle. It cannot confirm the exact allowance, charges, or treatment of overpayments on your own mortgage." />
       </Section>
 
-      <FAQSection items={faqs} />
+      <FAQSection items={faqs} compact />
 
       <CTASection
         title="Check the impact before you make an extra payment"
         description="Run the calculator with your intended monthly overpayment or lump sum, then compare it against your own mortgage limit."
+        compact
       />
     </>
   )

@@ -7,11 +7,12 @@ type CTASectionProps = {
   title: string
   description: string
   secondaryText?: string
+  compact?: boolean
 }
 
-export function CTASection({ title, description, secondaryText }: CTASectionProps) {
+export function CTASection({ title, description, secondaryText, compact = false }: CTASectionProps) {
   return (
-    <Section>
+    <Section compact={compact}>
       <div className="card rounded-[2rem] bg-slate-950 px-6 py-8 text-white sm:px-8 sm:py-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-3">
