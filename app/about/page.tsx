@@ -36,23 +36,33 @@ export default function AboutPage() {
       <Section className="pt-6">
         <PageIntro
           title="About Mortgage Overpay"
-          intro="Mortgage Overpay is designed to give UK homeowners a faster, clearer view of how mortgage overpayments could change payoff date, interest paid, and total term."
+          intro="Mortgage Overpay was created to give UK homeowners a simple way to understand how overpayments can affect their mortgage."
         />
       </Section>
 
       <Section title="What the site is for" description="Simple scope is part of the value.">
-        <div className="grid gap-4 lg:grid-cols-2">
-          <article className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-600">
-            The site focuses on quick decision support rather than account setup, dashboards, or linked data. Version 1 is deliberately web-first, fast, and low friction.
-          </article>
-          <article className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-600">
-            The calculator uses a repayment mortgage model with monthly compounding and reducing balance assumptions to estimate time saved and interest saved from overpayments.
-          </article>
+        <div className="space-y-4 text-sm leading-7 text-slate-600">
+          <div className="card rounded-[2rem] px-5 py-5">
+            Many mortgage tools are overly complex, require sign-ups, or focus on selling products. This site takes a
+            different approach by providing a fast, straightforward calculator that helps you see how overpaying could
+            change your mortgage-free date and the total interest you pay.
+          </div>
+          <div className="card rounded-[2rem] px-5 py-5">
+            The goal is simple: to offer a free, easy-to-use tool that helps you make more informed decisions about
+            your mortgage.
+          </div>
         </div>
       </Section>
 
       <Section title="Assumptions and limitations" description="Clear limitations build trust.">
-        <TrustNote children="The tool gives illustrative results, not regulated advice. It does not know your exact mortgage contract, charges, or lender treatment of overpayments, so you should always check your own terms before acting." />
+        <div className="space-y-4">
+          <div className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-600">
+            This calculator is based on standard UK repayment mortgage assumptions, including monthly interest
+            calculations and reducing balances over time. It is designed to give clear estimates that can help with
+            planning, but it does not replace personalised financial advice.
+          </div>
+          <TrustNote children="If you are considering making changes to your mortgage, it is always worth reviewing your lender’s terms and, where appropriate, speaking to a qualified adviser." />
+        </div>
       </Section>
 
       <CTASection

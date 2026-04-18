@@ -21,9 +21,9 @@ import { PAGE_COPY } from "@/content/pageCopy"
 import { STRAPLINE } from "@/lib/constants"
 
 export const metadata = buildMetadata({
-  title: "UK Mortgage Overpayment Calculator | Mortgage Overpay",
+  title: "UK Mortgage Overpayment Calculator | Interest & Time Saved",
   description:
-    "Use this UK mortgage overpayment calculator to estimate your mortgage-free date, interest saved, and the impact of extra payments with instant answers.",
+    "Calculate how much time and interest you could save by overpaying your mortgage. Compare monthly and lump-sum overpayments with a fast, easy-to-use UK calculator.",
   path: ROUTES.home,
 })
 
@@ -35,9 +35,9 @@ export default function HomePage() {
       <JsonLd data={websiteSchema()} />
       <JsonLd
         data={webPageSchema({
-          title: "UK Mortgage Overpayment Calculator | Mortgage Overpay",
+          title: "UK Mortgage Overpayment Calculator | Interest & Time Saved",
           description:
-            "Use this UK mortgage overpayment calculator to estimate your mortgage-free date, interest saved, and the impact of extra payments with instant answers.",
+            "Calculate how much time and interest you could save by overpaying your mortgage. Compare monthly and lump-sum overpayments with a fast, easy-to-use UK calculator.",
           path: ROUTES.home,
         })}
       />

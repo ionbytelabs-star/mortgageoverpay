@@ -20,6 +20,21 @@ export const FAQS_BY_PAGE = {
       answer:
         "Overpaying usually reduces total interest on a repayment mortgage, but the best choice still depends on your own mortgage terms, flexibility, and other financial priorities.",
     },
+    {
+      question: "Is there a limit to how much I can overpay?",
+      answer:
+        "Most UK repayment mortgages allow you to overpay up to 10% of your outstanding balance each year without incurring a penalty. However, this limit can vary depending on your lender and mortgage terms. Always check your mortgage agreement or speak to your lender before making large overpayments to avoid unexpected charges.",
+    },
+    {
+      question: "Should I overpay my mortgage or save instead?",
+      answer:
+        "Overpaying your mortgage can reduce the total interest you pay and help you become mortgage-free sooner. However, if savings accounts or investments offer higher returns than your mortgage interest rate, it may make more sense to save instead. The right choice depends on your financial goals, risk tolerance, and need for accessible cash.",
+    },
+    {
+      question: "What are Early Repayment Charges (ERCs)?",
+      answer:
+        "Early Repayment Charges (ERCs) are fees some lenders apply if you repay more than your allowed overpayment limit or pay off your mortgage early. These charges are typically a percentage of the amount overpaid and are most common during fixed or discounted rate periods. Checking for ERCs before overpaying is essential to avoid reducing or cancelling out your potential savings.",
+    },
   ],
   calculator: [
     {
