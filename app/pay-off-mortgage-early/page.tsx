@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { CTASection } from "@/components/common/CTASection"
 import { FAQSection } from "@/components/common/FAQSection"
@@ -20,7 +22,7 @@ import { PAGE_COPY } from "@/content/pageCopy"
 export const metadata = buildMetadata({
   title: "How to Pay Off Your Mortgage Early | UK Guide",
   description:
-    "Explore practical ways to pay off your mortgage early, reduce interest, and shorten your term with a clearer plan.",
+    "Explore practical ways to pay off your mortgage early in the UK, reduce interest, and shorten your term with a clearer plan.",
   path: ROUTES.payOffEarly,
 })
 
@@ -93,7 +95,7 @@ export default function PayOffEarlyPage() {
           <article className="card rounded-[2rem] px-5 py-5">
             <h2 className="text-lg font-semibold text-slate-950">Check your mortgage terms</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Overpayment limits and charges matter just as much as the savings projection, especially if you are planning a larger extra payment.
+              Overpayment limits and charges matter just as much as the savings projection, especially if you are planning a larger extra payment. It can help to read about <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.overpaymentLimit}>mortgage overpayment limits in the UK</Link> before acting.
             </p>
           </article>
         </div>
@@ -117,7 +119,7 @@ export default function PayOffEarlyPage() {
       </Section>
 
       <Section title="Limitation" description="A projection is useful, but your exact mortgage terms still come first.">
-        <TrustNote children="Paying off a mortgage early can be a strong long-term goal, but the right pace depends on affordability, flexibility, and any limits or charges in your own mortgage terms." />
+        <TrustNote children="Paying off a mortgage early can be a strong long-term goal, but the right pace depends on affordability, flexibility, and any limits or charges in your own mortgage terms. Use estimates as a guide, then check the exact details." />
       </Section>
 
       <FAQSection items={faqs} />

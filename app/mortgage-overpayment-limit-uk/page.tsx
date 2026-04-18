@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { CTASection } from "@/components/common/CTASection"
 import { FAQSection } from "@/components/common/FAQSection"
@@ -20,7 +22,7 @@ import { PAGE_COPY } from "@/content/pageCopy"
 export const metadata = buildMetadata({
   title: "Mortgage Overpayment Limits in the UK | Simple Guide",
   description:
-    "Understand typical mortgage overpayment limits in the UK, why they matter, and what to check before making extra payments.",
+    "Understand typical mortgage overpayment limits in the UK, why they matter, and what to check before making extra payments to a repayment mortgage.",
   path: ROUTES.overpaymentLimit,
 })
 
@@ -65,7 +67,7 @@ export default function OverpaymentLimitPage() {
           <article className="card rounded-[2rem] px-5 py-5">
             <h2 className="text-lg font-semibold text-slate-950">Why the exact wording matters</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              The period, charge trigger, and treatment of lump sums can differ, so it is worth checking your own mortgage paperwork rather than relying on a general rule of thumb.
+              The period, charge trigger, and treatment of lump sums can differ, so it is worth checking your own mortgage paperwork rather than relying on a general rule of thumb or a calculator estimate alone.
             </p>
           </article>
         </div>
@@ -87,6 +89,9 @@ export default function OverpaymentLimitPage() {
             </article>
           ))}
         </div>
+        <p className="mt-4 text-sm leading-7 text-slate-600">
+          After checking the wording, you can use the <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.calculator}>mortgage overpayment calculator</Link> to estimate what a monthly overpayment or lump sum could change in practice.
+        </p>
       </Section>
 
       <Section title="Related pages" description="Use the calculator, then sense-check the result against your mortgage terms.">
@@ -107,7 +112,7 @@ export default function OverpaymentLimitPage() {
       </Section>
 
       <Section title="Calm trust note" description="General guidance still needs your own paperwork.">
-        <TrustNote children="This guide explains how overpayment limits usually work in principle. It cannot confirm the exact allowance or any charges on your own mortgage." />
+        <TrustNote children="This guide explains how overpayment limits usually work in principle. It cannot confirm the exact allowance, charges, or treatment of overpayments on your own mortgage." />
       </Section>
 
       <FAQSection items={faqs} />

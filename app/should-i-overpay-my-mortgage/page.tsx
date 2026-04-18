@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { CTASection } from "@/components/common/CTASection"
 import { FAQSection } from "@/components/common/FAQSection"
@@ -20,7 +22,7 @@ import { PAGE_COPY } from "@/content/pageCopy"
 export const metadata = buildMetadata({
   title: "Should I Overpay My Mortgage? | UK Guide",
   description:
-    "Learn when mortgage overpayments may make sense, what to check first, and how to compare overpaying with other options.",
+    "Learn when mortgage overpayments may make sense in the UK, what to check first, and how to compare overpaying with other options.",
   path: ROUTES.shouldIOverpay,
 })
 
@@ -34,7 +36,7 @@ export default function ShouldIOverpayPage() {
         data={webPageSchema({
           title: "Should I Overpay My Mortgage? | UK Guide",
           description:
-            "Learn when mortgage overpayments may make sense, what to check first, and how to compare overpaying with other options.",
+            "Learn when mortgage overpayments may make sense in the UK, what to check first, and how to compare overpaying with other options.",
           path: ROUTES.shouldIOverpay,
         })}
       />
@@ -71,13 +73,13 @@ export default function ShouldIOverpayPage() {
           <article className="card rounded-[2rem] px-5 py-5">
             <h2 className="text-lg font-semibold text-slate-950">What to check first</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Look at overpayment limits, possible charges, your current interest rate, and whether the extra payment still leaves enough monthly breathing room.
+              Look at <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.overpaymentLimit}>overpayment limits</Link>, possible charges, your current interest rate, and whether the extra payment still leaves enough monthly breathing room.
             </p>
           </article>
           <article className="card rounded-[2rem] px-5 py-5">
             <h2 className="text-lg font-semibold text-slate-950">A practical way to decide</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Test a realistic figure in the calculator, then ask whether the projected time saved and interest saved feel worth the reduced flexibility.
+              Test a realistic figure in the <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.calculator}>mortgage overpayment calculator</Link>, then ask whether the projected time saved and interest saved feel worth the reduced flexibility.
             </p>
           </article>
         </div>
@@ -105,7 +107,7 @@ export default function ShouldIOverpayPage() {
       </Section>
 
       <Section title="Clear limitation" description="A good result still needs a final sense-check.">
-        <TrustNote children="Whether overpaying is right for you depends on your own mortgage terms, cash buffer, and wider priorities. This page explains the trade-offs, not a one-size-fits-all answer." />
+        <TrustNote children="Whether overpaying is right for you depends on your own mortgage terms, cash buffer, and wider priorities. This page explains the trade-offs and should be read as guidance, not a one-size-fits-all answer." />
       </Section>
 
       <FAQSection items={faqs} />

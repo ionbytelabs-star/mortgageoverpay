@@ -5,6 +5,7 @@ import { FAQSection } from "@/components/common/FAQSection"
 import { TrustNote } from "@/components/common/TrustNote"
 import { DirectAnswer } from "@/components/content/DirectAnswer"
 import { InternalLinkBlock } from "@/components/content/InternalLinkBlock"
+import { KeyPointsList } from "@/components/content/KeyPointsList"
 import { PageIntro } from "@/components/content/PageIntro"
 import { Section } from "@/components/layout/Section"
 import { MortgageCalculator } from "@/components/calculator/MortgageCalculator"
@@ -21,7 +22,7 @@ import { PAGE_COPY } from "@/content/pageCopy"
 export const metadata = buildMetadata({
   title: "UK Mortgage Overpayment Calculator | Mortgage Overpay",
   description:
-    "Use this UK mortgage overpayment calculator to estimate interest saved, time saved, and your new mortgage-free date in seconds.",
+    "Use this UK mortgage overpayment calculator to estimate interest saved, time saved, and your new mortgage-free date for a repayment mortgage in seconds.",
   path: ROUTES.calculator,
 })
 
@@ -35,7 +36,7 @@ export default function CalculatorPage() {
         data={webPageSchema({
           title: "UK Mortgage Overpayment Calculator | Mortgage Overpay",
           description:
-            "Use this UK mortgage overpayment calculator to estimate interest saved, time saved, and your new mortgage-free date in seconds.",
+            "Use this UK mortgage overpayment calculator to estimate interest saved, time saved, and your new mortgage-free date for a repayment mortgage in seconds.",
           path: ROUTES.calculator,
         })}
       />
@@ -50,7 +51,10 @@ export default function CalculatorPage() {
       </Section>
 
       <Section className="pt-0">
-        <DirectAnswer answer={PAGE_COPY.calculator.directAnswer} />
+        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <DirectAnswer answer={PAGE_COPY.calculator.directAnswer} />
+          <KeyPointsList title="What you can learn quickly" items={PAGE_COPY.calculator.keyPoints} />
+        </div>
       </Section>
 
       <Section className="pt-0">
@@ -59,48 +63,54 @@ export default function CalculatorPage() {
 
       <Section
         title="How mortgage overpayments work"
-        description="A repayment mortgage balance falls a little each month. An overpayment pushes that balance down faster."
+        description="A short summary of what changes when you pay extra towards a UK repayment mortgage."
       >
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-3">
           <article className="card rounded-[2rem] px-5 py-5">
-            <h2 className="text-lg font-semibold text-slate-950">Why overpaying can reduce total interest</h2>
+            <h2 className="text-lg font-semibold text-slate-950">How does an overpayment reduce the balance faster?</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Interest is charged on the remaining balance. If the balance drops faster, future interest is charged on a smaller amount.
+              Each extra payment goes towards the balance sooner, so less of the mortgage is left outstanding in later months.
             </p>
           </article>
           <article className="card rounded-[2rem] px-5 py-5">
-            <h2 className="text-lg font-semibold text-slate-950">What to check before overpaying</h2>
+            <h2 className="text-lg font-semibold text-slate-950">Why can this reduce total interest?</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Check your mortgage terms for overpayment limits, charges, and whether your lender shortens the term or changes the monthly payment.
+              Interest is charged on the remaining balance. If the balance falls faster, future interest is usually charged on a smaller amount.
             </p>
           </article>
           <article className="card rounded-[2rem] px-5 py-5">
-            <h2 className="text-lg font-semibold text-slate-950">Typical UK overpayment limits</h2>
+            <h2 className="text-lg font-semibold text-slate-950">How do monthly overpayments and lump sums differ?</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Many mortgages allow some extra repayment each year, but the exact limit can vary. Larger lump sums may count towards that allowance.
+              A monthly overpayment changes the path steadily over time, while a lump sum makes a one-off reduction to the balance straight away.
             </p>
-            <Link href={ROUTES.overpaymentLimit} className="focus-ring mt-4 inline-flex rounded-full text-sm font-semibold text-teal-800">
-              Read the overpayment limits guide
-            </Link>
-          </article>
-          <article className="card rounded-[2rem] px-5 py-5">
-            <h2 className="text-lg font-semibold text-slate-950">Overpay vs save</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-600">
-              Overpaying can reduce interest, while saving can preserve flexibility. The better fit depends on what matters most to your household.
-            </p>
-            <Link href={ROUTES.shouldIOverpay} className="focus-ring mt-4 inline-flex rounded-full text-sm font-semibold text-teal-800">
-              Explore the decision guide
-            </Link>
           </article>
         </div>
       </Section>
 
-      <Section title="Related pages" description="Use the guides below to sense-check the result and plan the next step.">
-        <InternalLinkBlock title="Go deeper" links={PAGE_COPY.calculator.relatedLinks} />
+      <Section
+        title="What to check before overpaying"
+        description="Keep the result practical by checking a few real-world details before you act."
+      >
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            "Whether your mortgage allows regular or one-off overpayments",
+            "What the typical UK overpayment limit is in your mortgage terms",
+            "Whether an early repayment charge could apply",
+            "Whether emergency savings should come first for flexibility",
+          ].map((item) => (
+            <article key={item} className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-700">
+              {item}
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="Useful next steps" description="Use the guides below to sense-check the result and plan the next step.">
+        <InternalLinkBlock title="Related guides" links={PAGE_COPY.calculator.relatedLinks} />
       </Section>
 
       <Section title="Important note" description="Keep the result practical and grounded.">
-        <TrustNote />
+        <TrustNote children="This calculator gives estimates for a UK repayment mortgage using the figures you enter. Your lender terms, overpayment limits, charges, and individual circumstances may differ." />
       </Section>
 
       <FAQSection items={faqs} />

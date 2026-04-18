@@ -16,4 +16,4 @@ export const DESIGN_TOKENS = {
 }
 
 export const CONTENT_NOTE =
-  "This tool is for information only and uses a simplified repayment mortgage model. Check your own mortgage terms before acting."
+  "This calculator gives estimates using a simplified repayment mortgage model. Your lender terms, overpayment rules, and individual circumstances may differ, so it is worth checking your own mortgage details before acting."

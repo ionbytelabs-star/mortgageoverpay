@@ -21,9 +21,9 @@ import { PAGE_COPY } from "@/content/pageCopy"
 import { STRAPLINE } from "@/lib/constants"
 
 export const metadata = buildMetadata({
-  title: "Pay Off Your Mortgage Sooner | Mortgage Overpay",
+  title: "UK Mortgage Overpayment Calculator and Guides | Mortgage Overpay",
   description:
-    "See how overpaying your mortgage could change your mortgage-free date, interest paid, and total term. Instant answers for UK homeowners.",
+    "See how UK mortgage overpayments could change your mortgage-free date, interest paid, and total term with instant estimates and practical supporting guides.",
   path: ROUTES.home,
 })
 
@@ -35,9 +35,9 @@ export default function HomePage() {
       <JsonLd data={websiteSchema()} />
       <JsonLd
         data={webPageSchema({
-          title: "Pay Off Your Mortgage Sooner | Mortgage Overpay",
+          title: "UK Mortgage Overpayment Calculator and Guides | Mortgage Overpay",
           description:
-            "See how overpaying your mortgage could change your mortgage-free date, interest paid, and total term. Instant answers for UK homeowners.",
+            "See how UK mortgage overpayments could change your mortgage-free date, interest paid, and total term with instant estimates and practical supporting guides.",
           path: ROUTES.home,
         })}
       />
@@ -86,7 +86,18 @@ export default function HomePage() {
       </Section>
 
       <Section title="What the tool does" description="A clear, direct answer before you scroll any further.">
-        <DirectAnswer answer={PAGE_COPY.home.directAnswer} />
+        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <DirectAnswer answer={PAGE_COPY.home.directAnswer} />
+          <InternalLinkBlock
+            title="Start with the right page"
+            links={[
+              { href: ROUTES.calculator, label: "Use the UK mortgage overpayment calculator" },
+              { href: ROUTES.shouldIOverpay, label: "Read should I overpay my mortgage?" },
+              { href: ROUTES.overpaymentLimit, label: "Read about mortgage overpayment limits in the UK" },
+              { href: ROUTES.payOffEarly, label: "Read how to pay off your mortgage early" },
+            ]}
+          />
+        </div>
       </Section>
 
       <Section
@@ -117,6 +128,7 @@ export default function HomePage() {
         <InternalLinkBlock
           title="Explore the guides"
           links={[
+            { href: ROUTES.calculator, label: "Open the mortgage overpayment calculator" },
             { href: ROUTES.shouldIOverpay, label: "Should I overpay my mortgage?" },
             { href: ROUTES.overpaymentLimit, label: "Mortgage overpayment limits in the UK" },
             { href: ROUTES.payOffEarly, label: "How to pay off your mortgage early" },
