@@ -40,7 +40,7 @@ export function ResultsChartCard({ data }: ResultsChartCardProps) {
               tickFormatter={(value) => formatCurrency(Number(value))}
             />
             <Tooltip
-              formatter={(value: number) => formatCurrency(Number(value))}
+              formatter={(value) => formatCurrency(Number(value ?? 0))}
               contentStyle={{
                 borderRadius: "18px",
                 border: "1px solid #dbe4ea",
