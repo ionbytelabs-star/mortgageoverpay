@@ -19,7 +19,9 @@ export function Footer() {
               </p>
             </div>
             <p className="text-sm text-slate-500">
-              Information only. Always check your own mortgage terms, charges, and overpayment rules before acting.
+              This calculator provides estimates based on standard UK repayment mortgage assumptions. It does not
+              take into account individual lender terms or financial circumstances and is for informational purposes
+              only.
             </p>
           </div>
 
