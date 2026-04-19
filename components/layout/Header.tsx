@@ -31,7 +31,10 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="focus-ring rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-950"
+                aria-label={item.ariaLabel}
+                className={`focus-ring rounded-full px-3 py-2 text-sm transition hover:bg-slate-100 hover:text-slate-950 ${
+                  item.href === ROUTES.guides ? "font-semibold text-slate-800" : "font-medium text-slate-600"
+                }`}
               >
                 {item.label}
               </Link>

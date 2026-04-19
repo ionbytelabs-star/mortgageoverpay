@@ -1,6 +1,5 @@
 import Link from "next/link"
 
-import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { CTASection } from "@/components/common/CTASection"
 import { FAQSection } from "@/components/common/FAQSection"
 import { TrustNote } from "@/components/common/TrustNote"
@@ -85,10 +84,6 @@ export default function ShouldIOverpayPage() {
         </div>
       </Section>
 
-      <Section className="pt-0" compact>
-        <AdPlaceholder label="Reserved banner placement after the first major supporting section" />
-      </Section>
-
       <Section title="Helpful next steps" description="Move from a general decision to a more specific plan." compact>
         <InternalLinkBlock
           links={[
@@ -96,13 +91,6 @@ export default function ShouldIOverpayPage() {
             { href: ROUTES.overpaymentLimit, label: "Check mortgage overpayment limits in the UK" },
             { href: ROUTES.payOffEarly, label: "Read how to pay off your mortgage early" },
           ]}
-        />
-      </Section>
-
-      <Section className="pt-0" compact>
-        <AdPlaceholder
-          label="Optional lower-page advert placement on a longer supporting guide"
-          variant="rectangle"
         />
       </Section>
 

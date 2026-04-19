@@ -1,6 +1,5 @@
 import Link from "next/link"
 
-import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { BenefitsRow } from "@/components/common/BenefitsRow"
 import { ComparisonSection } from "@/components/common/ComparisonSection"
 import { CTASection } from "@/components/common/CTASection"
@@ -94,10 +93,6 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-
-      <Section className="pt-0">
-        <AdPlaceholder label="Reserved banner placement below homepage hero" hideLabel />
-      </Section>
 
       <Section title="Useful next steps" description="Choose the page that best matches the mortgage overpayment question you want to answer next.">
         <InternalLinkBlock

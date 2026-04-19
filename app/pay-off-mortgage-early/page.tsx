@@ -1,6 +1,5 @@
 import Link from "next/link"
 
-import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { CTASection } from "@/components/common/CTASection"
 import { FAQSection } from "@/components/common/FAQSection"
 import { TrustNote } from "@/components/common/TrustNote"
@@ -80,10 +79,6 @@ export default function PayOffEarlyPage() {
         </div>
       </Section>
 
-      <Section className="pt-0" compact>
-        <AdPlaceholder label="Reserved banner placement after the first major supporting section" />
-      </Section>
-
       <Section
         title="What makes a plan workable?"
         description="The goal is not just to pay early. It is to pay early without creating unnecessary pressure."
@@ -112,13 +107,6 @@ export default function PayOffEarlyPage() {
             { href: ROUTES.shouldIOverpay, label: "Read should I overpay my mortgage?" },
             { href: ROUTES.overpaymentLimit, label: "Read mortgage overpayment limits in the UK" },
           ]}
-        />
-      </Section>
-
-      <Section className="pt-0" compact>
-        <AdPlaceholder
-          label="Optional lower-page advert placement on a longer supporting guide"
-          variant="rectangle"
         />
       </Section>
 

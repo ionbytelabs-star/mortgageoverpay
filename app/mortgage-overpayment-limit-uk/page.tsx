@@ -1,6 +1,5 @@
 import Link from "next/link"
 
-import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { CTASection } from "@/components/common/CTASection"
 import { FAQSection } from "@/components/common/FAQSection"
 import { TrustNote } from "@/components/common/TrustNote"
@@ -77,10 +76,6 @@ export default function OverpaymentLimitPage() {
         </div>
       </Section>
 
-      <Section className="pt-0" compact>
-        <AdPlaceholder label="Reserved banner placement after the first major supporting section" />
-      </Section>
-
       <Section title="What to check before you pay extra" description="A quick checklist can prevent the wrong kind of overpayment." compact>
         <ul className="grid gap-4 md:grid-cols-3">
           {[
@@ -108,13 +103,6 @@ export default function OverpaymentLimitPage() {
             { href: ROUTES.shouldIOverpay, label: "Read should I overpay my mortgage?" },
             { href: ROUTES.payOffEarly, label: "Read how to pay off your mortgage early" },
           ]}
-        />
-      </Section>
-
-      <Section className="pt-0" compact>
-        <AdPlaceholder
-          label="Optional lower-page advert placement on a longer supporting guide"
-          variant="rectangle"
         />
       </Section>
 

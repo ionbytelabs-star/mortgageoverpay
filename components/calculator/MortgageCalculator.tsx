@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 
-import { AdPlaceholder } from "@/components/common/AdPlaceholder"
 import { CalculatorForm } from "@/components/calculator/CalculatorForm"
 import { ExplanationBlock } from "@/components/calculator/ExplanationBlock"
 import { ResultsBreakdown } from "@/components/calculator/ResultsBreakdown"
@@ -104,14 +103,6 @@ export function MortgageCalculator({ variant = "full" }: MortgageCalculatorProps
       {result ? (
         <>
           <ResultsChartCard data={result.chartData} />
-
-          <AdPlaceholder
-            label={
-              isEmbedded
-                ? "Reserved banner placement below homepage calculator preview"
-                : "Reserved banner placement below calculator results"
-            }
-          />
 
           <ExplanationBlock result={result} inputs={normalised} />
 
