@@ -110,26 +110,18 @@ export default function GuidesPage() {
           {guideLinks.map((guide) => (
             <article key={guide.title} className="card rounded-[2rem] px-5 py-5">
               <h2 className="text-lg font-semibold text-slate-950">
-                {guide.href ? (
-                  <Link href={guide.href} className="focus-ring rounded-sm underline-offset-4 hover:underline">
-                    {guide.title}
-                  </Link>
-                ) : (
-                  guide.title
-                )}
+                <Link href={guide.href} className="focus-ring rounded-sm underline-offset-4 hover:underline">
+                  {guide.title}
+                </Link>
               </h2>
               <p className="mt-3 text-sm leading-7 text-slate-600">
                 {guide.description}{" "}
-                {guide.href ? (
-                  <Link
-                    href={guide.href}
-                    className="focus-ring font-semibold text-teal-800 underline-offset-4 hover:underline"
-                  >
-                    Find out more.
-                  </Link>
-                ) : (
-                  <span className="font-semibold text-slate-500">Find out more.</span>
-                )}
+                <Link
+                  href={guide.href}
+                  className="focus-ring font-semibold text-teal-800 underline-offset-4 hover:underline"
+                >
+                  Find out more.
+                </Link>
               </p>
             </article>
           ))}
