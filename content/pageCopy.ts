@@ -2,11 +2,11 @@ import { ROUTES } from "@/lib/routes"
 
 export const PAGE_COPY = {
   home: {
-    title: "Pay off your mortgage sooner",
+    title: "Mortgage Overpayment Calculator UK",
     intro:
-      "Use this UK mortgage overpayment calculator to estimate your mortgage-free date, interest saved, and the impact of extra payments in seconds.",
+      "Use this calculator to see how mortgage overpayments could change your mortgage-free date, total interest, and overall term. It is designed for UK homeowners with repayment mortgages who want a quick, practical answer without extra friction.",
     directAnswer:
-      "Mortgage Overpay is a UK mortgage overpayment calculator for homeowners who want a quick estimate without extra friction. It shows how mortgage overpayments could affect your mortgage-free date, interest saved, and overall term using a UK repayment mortgage model.",
+      "This mortgage overpayment calculator UK homeowners can use is built to show what extra payments could do to a repayment mortgage in plain English. It helps you estimate interest saved, time saved, and how regular monthly overpayments or a lump sum could change your mortgage-free date.",
     keyPoints: [
       "See your mortgage-free date",
       "Estimate interest saved",

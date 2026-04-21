@@ -1,34 +1,34 @@
 export const FAQS_BY_PAGE = {
   home: [
     {
-      question: "Is this calculator free?",
+      question: "Is overpaying your mortgage worth it?",
       answer:
-        "Yes. The calculator is free to use and does not ask you to create an account before seeing your result.",
+        "Overpaying is often worth considering if your aim is to reduce interest and become mortgage-free sooner, and if you already have a good cash buffer. It may be less attractive if savings rates are stronger, you need flexibility, or your mortgage terms include charges that reduce the benefit.",
     },
     {
-      question: "Do I need to sign up?",
+      question: "How much can you overpay on a mortgage in the UK?",
       answer:
-        "No. You can enter your figures and get an answer straight away without signing up or linking any accounts.",
+        "Many UK mortgages allow around 10% of the outstanding balance to be overpaid each year during a fixed deal without an early repayment charge. The exact allowance varies, so always check your own mortgage agreement before making a larger extra payment.",
     },
     {
-      question: "Does this work for UK mortgages?",
+      question: "Does overpaying reduce the term or monthly payment?",
       answer:
-        "It is designed for UK-style repayment mortgages and uses a monthly repayment model to estimate the effect of overpayments.",
+        "It can do either, depending on how your lender applies the overpayment. Many borrowers want the term reduced because that is what cuts interest and brings the mortgage-free date forward, so it is worth checking how your lender handles it.",
     },
     {
-      question: "Will overpaying always save money?",
+      question: "Should you overpay your mortgage or save instead?",
       answer:
-        "Overpaying usually reduces total interest on a repayment mortgage, but the best choice still depends on your own mortgage terms, flexibility, and other financial priorities.",
+        "If your mortgage rate is higher than what you can earn on accessible savings, overpaying often has the stronger case. If savings rates are better, or you need more flexibility and emergency cash, saving may suit you better.",
     },
     {
-      question: "Is there a limit to how much I can overpay?",
+      question: "Can small overpayments still make a difference?",
       answer:
-        "Most UK repayment mortgages allow you to overpay up to 10% of your outstanding balance each year without incurring a penalty. However, this limit can vary depending on your lender and mortgage terms. Always check your mortgage agreement or speak to your lender before making large overpayments to avoid unexpected charges.",
+        "Yes. Even a smaller monthly overpayment can reduce the balance faster and lower the total interest paid over time. The exact effect depends on your balance, interest rate, and term, which is why it helps to test a few different figures in the calculator.",
     },
     {
-      question: "Should I overpay my mortgage or save instead?",
+      question: "Is this calculator free to use?",
       answer:
-        "Overpaying your mortgage can reduce the total interest you pay and help you become mortgage-free sooner. However, if savings accounts or investments offer higher returns than your mortgage interest rate, it may make more sense to save instead. The right choice depends on your financial goals, risk tolerance, and need for accessible cash.",
+        "Yes. You can use the calculator without creating an account, linking anything, or entering personal details beyond the mortgage figures you want to test.",
     },
     {
       question: "What are Early Repayment Charges (ERCs)?",
