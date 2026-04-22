@@ -21,7 +21,7 @@ import { PAGE_COPY } from "@/content/pageCopy"
 import { STRAPLINE } from "@/lib/constants"
 
 export const metadata = buildMetadata({
-  title: "UK Mortgage Overpayment Calculator | Interest & Time Saved",
+  title: "Mortgage Overpayment Calculator UK | Interest & Time Saved",
   description:
     "Calculate how much time and interest you could save by overpaying your mortgage. Compare monthly and lump-sum overpayments with a fast, easy-to-use UK calculator.",
   path: ROUTES.home,
@@ -35,7 +35,7 @@ export default function HomePage() {
       <JsonLd data={websiteSchema()} />
       <JsonLd
         data={webPageSchema({
-          title: "UK Mortgage Overpayment Calculator | Interest & Time Saved",
+          title: "Mortgage Overpayment Calculator UK | Interest & Time Saved",
           description:
             "Calculate how much time and interest you could save by overpaying your mortgage. Compare monthly and lump-sum overpayments with a fast, easy-to-use UK calculator.",
           path: ROUTES.home,
@@ -77,6 +77,12 @@ export default function HomePage() {
               </div>
               <div className="space-y-4">
                 <DirectAnswer title="UK mortgage overpayment calculator" answer={PAGE_COPY.home.directAnswer} />
+                <p className="max-w-2xl text-sm leading-7 text-slate-600">
+                  The tool is built for people who want to overpay mortgage UK deals in a practical way, compare a regular
+                  overpayment with a lump sum, and get a quick estimate before making any changes. Results are based on a
+                  standard UK repayment mortgage model, so they are best used as a planning guide rather than a final lender
+                  figure.
+                </p>
                 <ul className="space-y-3 rounded-[2rem] border border-slate-200 bg-white px-5 py-5 text-sm leading-6 text-slate-700">
                   {PAGE_COPY.home.keyPoints.map((item) => (
                     <li key={item} className="flex gap-3">
@@ -91,6 +97,10 @@ export default function HomePage() {
 
             <div id="calculator-preview" className="space-y-6">
               <MortgageCalculator variant="embedded" />
+              <div className="rounded-[2rem] border border-slate-200 bg-white px-5 py-5 text-sm leading-7 text-slate-600">
+                This calculator gives general guidance for UK repayment mortgages. Lender terms, overpayment limits, and any
+                charges can vary, so check your mortgage agreement before acting on the result.
+              </div>
             </div>
           </div>
         </Container>
@@ -99,6 +109,7 @@ export default function HomePage() {
       <Section
         title="What Happens When You Overpay Your Mortgage?"
         description="Overpaying works by reducing the mortgage balance faster than planned."
+        compact
       >
         <div className="grid gap-4 lg:grid-cols-2">
           <article className="card rounded-[2rem] px-5 py-5">
@@ -122,25 +133,52 @@ export default function HomePage() {
             a practical estimate. Instead of guessing, you can see how an overpay mortgage UK plan could affect interest paid and
             the mortgage-free date.
           </p>
+          <p>
+            In practice, this matters because even a smaller extra payment can start changing the mortgage path earlier than many
+            people expect. The sooner the balance falls, the sooner interest is usually being worked out on a smaller figure.
+          </p>
+          <p>
+            That is also why lender instructions matter. Some borrowers assume any extra payment automatically shortens the term,
+            but some lenders may instead reduce the monthly payment unless you ask otherwise. If your goal is to pay off mortgage
+            early UK style, it is worth checking exactly how your own mortgage handles overpayments.
+          </p>
         </div>
       </Section>
 
       <Section
         title="Should You Overpay Your Mortgage?"
         description="For some households it is a strong move. For others it is sensible to hold back."
+        compact
       >
         <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="space-y-4 text-sm leading-7 text-slate-600">
-          <p>
-            Overpaying can make sense when your mortgage rate is relatively high, you do not have expensive debt elsewhere, you
-            already have an emergency fund, and you value becoming mortgage-free sooner.
-          </p>
+            <p>
+              Overpaying can make sense when your mortgage rate is relatively high, you do not have expensive debt elsewhere,
+              you already have an emergency fund, and you value becoming mortgage-free sooner.
+            </p>
             <p>
               It may not be the best option when savings rates are stronger, you need more accessible cash, or your mortgage
               terms include charges that reduce the benefit. That is why the question should I overpay my mortgage UK borrowers
               ask so often never has a one-size-fits-all answer.
             </p>
-          <p>The right decision usually depends on your mortgage rate, savings rate, other debts, emergency fund, and how much flexibility you want to keep.</p>
+            <p>
+              The right decision usually depends on your mortgage rate, savings rate, other debts, emergency fund, and how much
+              flexibility you want to keep.
+            </p>
+            <p>
+              For some households, overpaying feels attractive because it gives a guaranteed reduction in mortgage interest.
+              For others, keeping cash accessible feels more valuable, especially when budgets are tight or larger costs may be
+              coming soon. That is why the best answer is usually a balance between the maths and your real-life need for
+              flexibility.
+            </p>
+            <p>
+              If you are weighing the same question right now, it helps to test the numbers first and then sense-check them
+              against your wider finances. Use the{" "}
+              <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.calculator}>
+                mortgage overpayment calculator UK homeowners can use here
+              </Link>{" "}
+              to see how much interest and time you could save before deciding whether the trade-off feels worthwhile.
+            </p>
           </div>
           <KeyPointsList
             title="A simple rule of thumb"
@@ -156,12 +194,17 @@ export default function HomePage() {
       <Section
         title="How Much Could You Save by Overpaying?"
         description="This is where the calculator becomes most useful."
+        compact
       >
         <div className="space-y-4 text-sm leading-7 text-slate-600">
           <p>
             The calculator helps you test the practical result of overpayments rather than relying on rough assumptions. You can
             see how much interest you might save, how much sooner the mortgage could end, and how the outcome changes if you use
             regular monthly overpayments instead of a lump sum.
+          </p>
+          <p>
+            That makes the tool more useful than a generic example. Two borrowers could both overpay by the same amount and see
+            very different results because their balances, interest rates, and remaining terms are different.
           </p>
           <p className="font-medium text-slate-800">
             Use the calculator to see how much interest and time you could save.
@@ -170,12 +213,17 @@ export default function HomePage() {
             Try different overpayment amounts to compare the results. Testing a few realistic options often makes the next step
             clearer than reading a general guide alone.
           </p>
+          <p>
+            Try a modest monthly amount first, then a higher figure, then a lump sum if that is relevant to you. Seeing the
+            difference side by side often gives a clearer answer than looking at one scenario in isolation.
+          </p>
         </div>
       </Section>
 
       <Section
         title="Mortgage Overpayment Limits in the UK"
         description="Overpayment limits matter because they affect how much extra you can pay without a charge."
+        compact
       >
         <div className="space-y-4 text-sm leading-7 text-slate-600">
           <p>
@@ -198,13 +246,18 @@ export default function HomePage() {
             </Link>
             .
           </p>
+          <p>
+            If you are planning a larger extra payment, it makes sense to check the limit before doing the maths. There is
+            little value in seeing a strong saving in the calculator if a charge would reduce the benefit in practice.
+          </p>
         </div>
       </Section>
 
       <Section
-        title="Ways to Overpay Your Mortgage"
+        title="Ways to Overpay Your Mortgage in the UK"
         description="There is more than one way to make extra payments."
         className="scroll-mt-24"
+        compact
       >
         <div id="how-it-works" className="grid gap-4 lg:grid-cols-3">
           <article className="card rounded-[2rem] px-5 py-5">
@@ -230,13 +283,22 @@ export default function HomePage() {
           </article>
         </div>
         <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
-          <p>If you are not sure which method is best, try different overpayment amounts to compare the results and see what feels practical as well as worthwhile.</p>
+          <p>
+            Regular monthly overpayments often suit people who want structure. Lump sums may suit people whose spare cash comes
+            in bursts rather than every month. Smaller flexible payments can work well when you want to keep more control over
+            short-term cash flow.
+          </p>
+          <p>
+            If you are not sure which method is best, try different overpayment amounts to compare the results and see what
+            feels practical as well as worthwhile.
+          </p>
         </div>
       </Section>
 
       <Section
         title="Common Questions About Mortgage Overpayments"
         description="Clear answers help you decide faster."
+        compact
       >
         <div className="grid gap-4 lg:grid-cols-2">
           <article className="card rounded-[2rem] px-5 py-5">
@@ -275,11 +337,18 @@ export default function HomePage() {
             </p>
           </article>
         </div>
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            These short answers are useful for quick decisions, but if you want a more detailed explanation of the trade-offs,
+            the guides below go into more depth without making you leave the topic entirely.
+          </p>
+        </div>
       </Section>
 
       <Section
         title="Learn More About Mortgage Overpayments"
         description="Use the homepage as a starting point, then move into the guide that fits your question best."
+        compact
       >
         <InternalLinkBlock
           title="Start with the right guide"
@@ -290,11 +359,36 @@ export default function HomePage() {
             { href: ROUTES.overpayVsSave, label: "Overpay mortgage or save in the UK" },
           ]}
         />
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            You can also go further into decision-focused topics such as{" "}
+            <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.worthIt}>
+              is overpaying your mortgage worth it
+            </Link>
+            ,{" "}
+            <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.lumpSumOverpayment}>
+              lump sum mortgage overpayments
+            </Link>
+            , and{" "}
+            <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.overpay100Or200}>
+              what happens if you overpay 100 or 200 a month
+            </Link>
+            .
+          </p>
+          <p>
+            If you would rather start with the numbers, use the{" "}
+            <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.calculator}>
+              mortgage overpayment calculator UK tool
+            </Link>{" "}
+            first, then open the guide that best matches the question you still have.
+          </p>
+        </div>
       </Section>
 
       <Section
         title="Important Things to Check Before Overpaying"
         description="A short checklist can save you from the most common mistakes."
+        compact
       >
         <ul className="grid gap-4 lg:grid-cols-2">
           {[
@@ -312,11 +406,17 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            If any of those points are unclear, check your mortgage agreement before making changes. That small step can stop a
+            well-meant overpayment from creating a charge or an unexpected payment outcome.
+          </p>
+        </div>
       </Section>
 
       <ComparisonSection />
 
-      <Section title="Plain-English trust note" description="Clear scope, calm tone, and no pressure.">
+      <Section title="Plain-English trust note" description="Clear scope, calm tone, and no pressure." compact>
         <TrustNote children="This calculator gives estimates based on a UK repayment mortgage model. Results are for general guidance only, and lender terms, overpayment limits, charges, and your wider finances may all affect the real outcome." />
       </Section>
 
