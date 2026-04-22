@@ -43,6 +43,18 @@ const guideLinks = [
       "Compare whether your money works harder reducing your mortgage or earning interest in savings, based on current UK rates and real scenarios.",
   },
   {
+    href: ROUTES.overpayVsInvest,
+    title: "Should I Overpay My Mortgage or Invest in the UK?",
+    description:
+      "Compare the certainty of mortgage overpayments with the long-term potential of investing, including when each option may make more sense.",
+  },
+  {
+    href: ROUTES.overpayVsPension,
+    title: "Should I Overpay My Mortgage or Pension in the UK?",
+    description:
+      "Understand how mortgage overpayments compare with pension contributions, tax relief, and employer matching before deciding where extra money should go.",
+  },
+  {
     href: ROUTES.worthIt,
     title: "Is Overpaying Your Mortgage Worth It in the UK?",
     description:
@@ -62,7 +74,7 @@ const guideLinks = [
   },
   {
     href: ROUTES.overpay100Or200,
-    title: "What Happens If You Overpay GBP100 or GBP200 a Month on Your Mortgage?",
+    title: "What Happens If You Overpay £100 or £200 a Month on Your Mortgage?",
     description:
       "Find out how small monthly overpayments can impact your mortgage term, interest, and long-term savings with real examples.",
   },
@@ -71,6 +83,12 @@ const guideLinks = [
     title: "Just Remortgaged at a Higher Rate? How to Reduce Your Mortgage Payments Fast",
     description:
       "If your payments have jumped, explore practical ways to ease the pressure and take control of your mortgage costs.",
+  },
+  {
+    href: ROUTES.afterFixedRate,
+    title: "Can I Overpay My Mortgage After My Fixed Rate Ends?",
+    description:
+      "Learn what usually changes when a fixed mortgage deal ends, whether charges still apply, and when overpaying may become more flexible.",
   },
 ]
 

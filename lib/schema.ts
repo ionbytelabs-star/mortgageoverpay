@@ -48,6 +48,52 @@ export function webPageSchema({
   }
 }
 
+export function articleSchema({
+  title,
+  description,
+  path,
+  keywords,
+  about,
+}: {
+  title: string
+  description: string
+  path: string
+  keywords?: string[]
+  about?: string[]
+}) {
+  const url = new URL(path, SITE_URL).toString()
+  const homepageUrl = new URL("/", SITE_URL).toString()
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    url,
+    mainEntityOfPage: url,
+    inLanguage: "en-GB",
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: homepageUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: homepageUrl,
+    },
+    ...(about?.length
+      ? {
+          about: about.map((item) => ({
+            "@type": "Thing",
+            name: item,
+          })),
+        }
+      : {}),
+    ...(keywords?.length ? { keywords } : {}),
+  }
+}
+
 export function faqSchema(questions: ReadonlyArray<SchemaQuestion>) {
   return {
     "@context": "https://schema.org",

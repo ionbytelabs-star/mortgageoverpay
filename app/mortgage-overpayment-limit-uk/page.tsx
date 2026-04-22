@@ -115,8 +115,8 @@ export default function OverpaymentLimitPage() {
             year without an early repayment charge. It is most common on fixed-rate and discounted mortgage deals.
           </p>
           <p>
-            In plain English, if the balance is GBP150,000 and your deal allows 10%, your charge-free allowance for that period
-            may be around GBP15,000. In many cases that total includes regular monthly overpayments and any one-off lump sums
+            In plain English, if the balance is £150,000 and your deal allows 10%, your charge-free allowance for that period
+            may be around £15,000. In many cases that total includes regular monthly overpayments and any one-off lump sums
             added together.
           </p>
           <p>
@@ -140,7 +140,7 @@ export default function OverpaymentLimitPage() {
           </p>
           <p>
             In many cases the fee is based on the amount above the allowance. For example, if your allowance is used up and you
-            then overpay by another GBP2,000, a 3% ERC would cost around GBP60. If the excess payment is much larger, the charge
+            then overpay by another £2,000, a 3% ERC would cost around £60. If the excess payment is much larger, the charge
             becomes more noticeable.
           </p>
           <p>
@@ -161,24 +161,24 @@ export default function OverpaymentLimitPage() {
       >
         <div className="grid gap-4 lg:grid-cols-3">
           <article className="card rounded-[2rem] px-5 py-5">
-            <h3 className="text-lg font-semibold text-slate-950">Example 1: GBP100,000 mortgage</h3>
+            <h3 className="text-lg font-semibold text-slate-950">Example 1: £100,000 mortgage</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              If the outstanding balance is GBP100,000 and your mortgage allows 10% a year, the overpayment allowance may be
-              around GBP10,000 before any charge applies.
+              If the outstanding balance is £100,000 and your mortgage allows 10% a year, the overpayment allowance may be
+              around £10,000 before any charge applies.
             </p>
           </article>
           <article className="card rounded-[2rem] px-5 py-5">
-            <h3 className="text-lg font-semibold text-slate-950">Example 2: GBP200,000 mortgage</h3>
+            <h3 className="text-lg font-semibold text-slate-950">Example 2: £200,000 mortgage</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              If the outstanding balance is GBP200,000 and the same 10% rule applies, the allowance may be around GBP20,000 in
+              If the outstanding balance is £200,000 and the same 10% rule applies, the allowance may be around £20,000 in
               that mortgage year. Monthly overpayments and lump sums may both count towards that figure.
             </p>
           </article>
           <article className="card rounded-[2rem] px-5 py-5">
             <h3 className="text-lg font-semibold text-slate-950">Example 3: Going over the allowance</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              If your allowance is GBP10,000 but you overpay GBP12,000, the excess is GBP2,000. If the ERC is 3%, the charge
-              could be around GBP60 on that excess payment.
+              If your allowance is £10,000 but you overpay £12,000, the excess is £2,000. If the ERC is 3%, the charge
+              could be around £60 on that excess payment.
             </p>
           </article>
         </div>
@@ -336,6 +336,55 @@ export default function OverpaymentLimitPage() {
           <p>
             A balanced answer is often best. Use as much of the allowance as feels sensible after checking your mortgage rate,
             savings position, and need for flexibility.
+          </p>
+        </div>
+      </Section>
+
+      <Section
+        title="Questions worth asking before you use the full allowance"
+        description="The allowance tells you how far you can go without a likely charge, but it does not automatically tell you how far you should go."
+        compact
+      >
+        <ul className="space-y-4">
+          {[
+            "Do I still have enough accessible cash after using this allowance?",
+            "Does the lender shorten the term or reduce the monthly payment after the overpayment?",
+            "Would a smaller overpayment still achieve most of the benefit with less pressure on savings?",
+            "Is the deal close to ending, which could change the flexibility soon anyway?",
+          ].map((item) => (
+            <li key={item} className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-700">
+              <span className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-teal-700" />
+                <span>{item}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section
+        title="How limits fit into the wider overpayment decision"
+        description="The mortgage overpayment limit matters, but it is still only one part of a bigger choice."
+        compact
+      >
+        <div className="space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            Borrowers often focus on the limit first because it looks like the key rule. In reality, the limit only answers one
+            question: how much can I usually overpay without a charge? It does not answer whether overpaying is the best use of
+            the money or whether the full allowance should actually be used.
+          </p>
+          <p>
+            That broader decision still depends on your mortgage rate, your savings position, your need for flexibility, and how
+            strongly you want to shorten the mortgage term. The limit protects you from fees, but it does not replace a wider
+            financial judgement.
+          </p>
+          <p>
+            In practice, the most useful approach is often to work out the safe allowance first, then decide how much of it you
+            actually want to use. That way the rule becomes a guardrail rather than the whole plan.
+          </p>
+          <p>
+            If the numbers are close, it can help to compare a smaller overpayment with the full allowance rather than assuming
+            the maximum is automatically the smartest option.
           </p>
         </div>
       </Section>

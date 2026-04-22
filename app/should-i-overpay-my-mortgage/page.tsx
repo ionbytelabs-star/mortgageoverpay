@@ -243,10 +243,10 @@ export default function ShouldIOverpayPage() {
       >
         <div className="grid gap-4 lg:grid-cols-3">
           <article className="card rounded-[2rem] px-5 py-5">
-            <h3 className="text-lg font-semibold text-slate-950">Example 1: GBP100 a month</h3>
+            <h3 className="text-lg font-semibold text-slate-950">Example 1: £100 a month</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              On a GBP200,000 mortgage at 4.5% with 25 years remaining, overpaying by GBP100 a month could cut the term by
-              roughly 2 years and save around GBP13,000 to GBP16,000 in interest.
+              On a £200,000 mortgage at 4.5% with 25 years remaining, overpaying by £100 a month could cut the term by
+              roughly 2 years and save around £13,000 to £16,000 in interest.
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-600">
               That is why small overpayments can still matter. The monthly amount may feel modest, but the long-term effect can
@@ -254,9 +254,9 @@ export default function ShouldIOverpayPage() {
             </p>
           </article>
           <article className="card rounded-[2rem] px-5 py-5">
-            <h3 className="text-lg font-semibold text-slate-950">Example 2: GBP5,000 lump sum</h3>
+            <h3 className="text-lg font-semibold text-slate-950">Example 2: £5,000 lump sum</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              On a similar mortgage, a one-off GBP5,000 lump sum early in the term could save several thousand pounds in
+              On a similar mortgage, a one-off £5,000 lump sum early in the term could save several thousand pounds in
               interest and cut many months off the payoff date, because the balance drops immediately.
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-600">
@@ -267,8 +267,8 @@ export default function ShouldIOverpayPage() {
           <article className="card rounded-[2rem] px-5 py-5">
             <h3 className="text-lg font-semibold text-slate-950">Example 3: Small vs large mortgage</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              A GBP100 overpayment on a smaller mortgage may bring a useful reduction in term, but the cash saving will often be
-              lower in absolute terms than the same GBP100 overpayment on a larger mortgage with a similar rate and term.
+            A £100 overpayment on a smaller mortgage may bring a useful reduction in term, but the cash saving will often be
+            lower in absolute terms than the same £100 overpayment on a larger mortgage with a similar rate and term.
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-600">
               In other words, the same overpayment can feel more powerful when the balance and interest cost are larger, even if
