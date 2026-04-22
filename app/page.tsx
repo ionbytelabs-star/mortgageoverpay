@@ -11,12 +11,11 @@ import { KeyPointsList } from "@/components/content/KeyPointsList"
 import { Container } from "@/components/layout/Container"
 import { Section } from "@/components/layout/Section"
 import { MortgageCalculator } from "@/components/calculator/MortgageCalculator"
-import { FAQSchema } from "@/components/seo/FAQSchema"
 import { JsonLd } from "@/components/seo/JsonLd"
 import { getFaqs } from "@/lib/faq"
 import { buildMetadata } from "@/lib/metadata"
 import { ROUTES } from "@/lib/routes"
-import { websiteSchema, webPageSchema } from "@/lib/schema"
+import { homepageStructuredData } from "@/lib/schema"
 import { PAGE_COPY } from "@/content/pageCopy"
 import { STRAPLINE } from "@/lib/constants"
 
@@ -32,16 +31,14 @@ const homeFaqs = getFaqs("home")
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={websiteSchema()} />
       <JsonLd
-        data={webPageSchema({
+        data={homepageStructuredData({
           title: "Mortgage Overpayment Calculator UK | Interest & Time Saved",
           description:
             "Calculate how much time and interest you could save by overpaying your mortgage. Compare monthly and lump-sum overpayments with a fast, easy-to-use UK calculator.",
-          path: ROUTES.home,
+          faqs: homeFaqs,
         })}
       />
-      <FAQSchema items={homeFaqs} />
 
       <section className="pb-8 pt-8 sm:pt-10">
         <Container>
@@ -142,6 +139,11 @@ export default function HomePage() {
             but some lenders may instead reduce the monthly payment unless you ask otherwise. If your goal is to pay off mortgage
             early UK style, it is worth checking exactly how your own mortgage handles overpayments.
           </p>
+          <p>
+            For searchers looking for an overpay mortgage UK calculator, that is often the real value of the tool. It does not
+            just tell you that overpaying can help. It shows what the change could look like with your own balance, your own
+            rate, and your own remaining term.
+          </p>
         </div>
       </Section>
 
@@ -178,6 +180,11 @@ export default function HomePage() {
                 mortgage overpayment calculator UK homeowners can use here
               </Link>{" "}
               to see how much interest and time you could save before deciding whether the trade-off feels worthwhile.
+            </p>
+            <p>
+              That balanced approach is especially important on a mortgage site. Some people come to a calculator already
+              convinced they should overpay. Others want reassurance that saving instead is reasonable. A good homepage should do
+              both: explain when overpaying can be sensible and when keeping the money accessible may be the smarter move.
             </p>
           </div>
           <KeyPointsList
@@ -217,6 +224,11 @@ export default function HomePage() {
             Try a modest monthly amount first, then a higher figure, then a lump sum if that is relevant to you. Seeing the
             difference side by side often gives a clearer answer than looking at one scenario in isolation.
           </p>
+          <p>
+            This is one reason a mortgage overpayment calculator UK page can be more useful than a general article. You are not
+            forced to rely on broad examples. You can test the exact sort of overpayment you are actually considering and see
+            whether the result feels meaningful enough to act on.
+          </p>
         </div>
       </Section>
 
@@ -249,6 +261,11 @@ export default function HomePage() {
           <p>
             If you are planning a larger extra payment, it makes sense to check the limit before doing the maths. There is
             little value in seeing a strong saving in the calculator if a charge would reduce the benefit in practice.
+          </p>
+          <p>
+            This is also why pages about mortgage overpayment limit UK rules and early repayment charges matter alongside the
+            calculator. The calculator shows the potential upside. Your mortgage terms tell you whether that upside is actually
+            available without a penalty.
           </p>
         </div>
       </Section>
@@ -291,6 +308,11 @@ export default function HomePage() {
           <p>
             If you are not sure which method is best, try different overpayment amounts to compare the results and see what
             feels practical as well as worthwhile.
+          </p>
+          <p>
+            For many households, the best approach is not the biggest overpayment possible. It is the one that feels realistic
+            month after month. A plan that lasts is usually more useful than a more ambitious one that quickly becomes too hard
+            to maintain.
           </p>
         </div>
       </Section>
@@ -342,6 +364,11 @@ export default function HomePage() {
             These short answers are useful for quick decisions, but if you want a more detailed explanation of the trade-offs,
             the guides below go into more depth without making you leave the topic entirely.
           </p>
+          <p>
+            That makes the homepage useful for both quick checks and deeper research. If you want a fast answer, the FAQ gives
+            you one. If you want more detail on should I overpay my mortgage UK decisions, mortgage overpayment limit UK rules,
+            or pay off mortgage early UK strategies, the related guides take you further.
+          </p>
         </div>
       </Section>
 
@@ -382,6 +409,11 @@ export default function HomePage() {
             </Link>{" "}
             first, then open the guide that best matches the question you still have.
           </p>
+          <p>
+            Taken together, those pages make the homepage work as a clean hub rather than just a single calculator screen. That
+            helps users move from quick estimate to clearer decision-making without losing their place or having to search around
+            for the next relevant answer.
+          </p>
         </div>
       </Section>
 
@@ -410,6 +442,11 @@ export default function HomePage() {
           <p>
             If any of those points are unclear, check your mortgage agreement before making changes. That small step can stop a
             well-meant overpayment from creating a charge or an unexpected payment outcome.
+          </p>
+          <p>
+            It also helps keep expectations realistic. This tool is designed to estimate what overpayments could do under a
+            standard UK repayment mortgage model. Your lender's own rules still decide how much you can overpay, when the
+            allowance resets, and whether the overpayment shortens the term or changes the monthly payment.
           </p>
         </div>
       </Section>

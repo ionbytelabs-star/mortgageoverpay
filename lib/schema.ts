@@ -16,6 +16,15 @@ export function websiteSchema() {
   }
 }
 
+export function organizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: new URL("/", SITE_URL).toString(),
+  }
+}
+
 export function webPageSchema({
   title,
   description,
@@ -81,5 +90,105 @@ export function softwareApplicationSchema() {
     },
     description:
       "A browser-based calculator that estimates mortgage-free date changes, interest saved, and time saved from overpayments.",
+  }
+}
+
+export function homepageStructuredData({
+  title,
+  description,
+  faqs,
+}: {
+  title: string
+  description: string
+  faqs: ReadonlyArray<SchemaQuestion>
+}) {
+  const homepageUrl = new URL("/", SITE_URL).toString()
+  const websiteId = `${homepageUrl}#website`
+  const organizationId = `${homepageUrl}#organization`
+  const articleId = `${homepageUrl}#article`
+  const toolId = `${homepageUrl}#tool`
+  const faqId = `${homepageUrl}#faq`
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": websiteId,
+        name: SITE_NAME,
+        url: homepageUrl,
+        description: SITE_DESCRIPTION,
+        inLanguage: "en-GB",
+      },
+      {
+        "@type": "Organization",
+        "@id": organizationId,
+        name: SITE_NAME,
+        url: homepageUrl,
+      },
+      {
+        "@type": "Article",
+        "@id": articleId,
+        headline: title,
+        description,
+        url: homepageUrl,
+        inLanguage: "en-GB",
+        mainEntityOfPage: homepageUrl,
+        author: {
+          "@id": organizationId,
+        },
+        publisher: {
+          "@id": organizationId,
+        },
+        about: [
+          { "@type": "Thing", name: "Mortgage overpayments" },
+          { "@type": "Thing", name: "UK repayment mortgages" },
+          { "@type": "Thing", name: "Mortgage overpayment calculator" },
+        ],
+        keywords: [
+          "mortgage overpayment calculator UK",
+          "overpay mortgage UK",
+          "should I overpay my mortgage UK",
+          "mortgage overpayment limit UK",
+          "pay off mortgage early UK",
+        ],
+      },
+      {
+        "@type": "WebApplication",
+        "@id": toolId,
+        name: "Mortgage Overpayment Calculator UK",
+        description,
+        url: homepageUrl,
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "Web",
+        inLanguage: "en-GB",
+        browserRequirements: "Requires a modern web browser with JavaScript enabled.",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "GBP",
+        },
+        featureList: [
+          "Estimate mortgage-free date",
+          "Estimate interest saved",
+          "Compare monthly overpayment scenarios",
+          "Model one-off lump sum overpayments",
+          "Show results for UK repayment mortgages without signup",
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": faqId,
+        url: homepageUrl,
+        mainEntity: faqs.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+    ],
   }
 }
