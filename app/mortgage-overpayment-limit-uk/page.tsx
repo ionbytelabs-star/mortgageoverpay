@@ -18,9 +18,9 @@ import { makeBreadcrumbs } from "@/lib/seo"
 import { articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata = buildMetadata({
-  title: "Mortgage Overpayment Limit UK (10% Rule Explained + Examples) | Mortgage Overpay",
+  title: "Mortgage Overpayment Limit UK (10% Rule Explained + Real Examples) | Mortgage Overpay",
   description:
-    "Understand the mortgage overpayment limit UK borrowers usually face, how the 10% rule works, when ERCs apply, and how to check your allowance.",
+    "Most UK mortgages allow around 10% overpayment a year without penalty. Learn how the mortgage overpayment limit UK rules work, when ERCs apply, and how to check your allowance.",
   path: ROUTES.overpaymentLimit,
 })
 
@@ -31,9 +31,9 @@ const breadcrumbs = makeBreadcrumbs([
 const faqs = getFaqs("overpaymentLimit")
 
 const keyTakeaways = [
-  "Most UK lenders allow around 10% of the outstanding balance to be overpaid each year during a fixed deal.",
-  "If you go above the mortgage overpayment allowance while charges still apply, an early repayment charge may be added.",
-  "Some tracker, flexible, and standard variable rate mortgages may allow more freedom, so terms can vary a lot.",
+  "Most UK lenders allow around 10% of the outstanding mortgage balance to be overpaid each year during a fixed deal.",
+  "If you go above that allowance while charges still apply, an early repayment charge may be added.",
+  "The exact mortgage overpayment allowance UK borrowers get depends on the mortgage type, lender terms, and reset date.",
 ]
 
 const exampleRows = [
@@ -44,9 +44,9 @@ const exampleRows = [
 
 const relatedLinks = [
   { href: ROUTES.calculator, label: "Use our mortgage overpayment calculator to see your savings" },
-  { href: ROUTES.tenPercentRule, label: "Read more on the 10% rule and early repayment charges" },
-  { href: ROUTES.lumpSumOverpayment, label: "Read about lump sum mortgage overpayments" },
+  { href: ROUTES.tenPercentRule, label: "Read more about the 10% rule and ERCs" },
   { href: ROUTES.afterFixedRate, label: "Read about overpaying after a fixed rate ends" },
+  { href: ROUTES.lumpSumOverpayment, label: "See how lump sum overpayments work in practice" },
   { href: ROUTES.shouldIOverpay, label: "Read should I overpay my mortgage in the UK?" },
 ]
 
@@ -55,22 +55,22 @@ export default function OverpaymentLimitPage() {
     <>
       <JsonLd
         data={webPageSchema({
-          title: "Mortgage Overpayment Limit UK (10% Rule Explained + Examples) | Mortgage Overpay",
+          title: "Mortgage Overpayment Limit UK (10% Rule Explained + Real Examples) | Mortgage Overpay",
           description:
-            "Understand the mortgage overpayment limit UK borrowers usually face, how the 10% rule works, when ERCs apply, and how to check your allowance.",
+            "Most UK mortgages allow around 10% overpayment a year without penalty. Learn how the mortgage overpayment limit UK rules work, when ERCs apply, and how to check your allowance.",
           path: ROUTES.overpaymentLimit,
         })}
       />
       <JsonLd
         data={articleSchema({
-          title: "Mortgage Overpayment Limit UK (10% Rule Explained + Examples) | Mortgage Overpay",
+          title: "Mortgage Overpayment Limit UK (10% Rule Explained + Real Examples) | Mortgage Overpay",
           description:
-            "Understand the mortgage overpayment limit UK borrowers usually face, how the 10% rule works, when ERCs apply, and how to check your allowance.",
+            "Most UK mortgages allow around 10% overpayment a year without penalty. Learn how the mortgage overpayment limit UK rules work, when ERCs apply, and how to check your allowance.",
           path: ROUTES.overpaymentLimit,
           keywords: [
             "mortgage overpayment limit UK",
-            "how much can I overpay my mortgage UK",
             "10% mortgage overpayment rule UK",
+            "how much can I overpay my mortgage UK",
             "mortgage overpayment allowance UK",
             "early repayment charge mortgage UK",
             "can I overpay more than 10% mortgage UK",
@@ -85,70 +85,86 @@ export default function OverpaymentLimitPage() {
 
       <Section className="pt-6" compact>
         <PageIntro
-          title="Mortgage Overpayment Limit UK (10% Rule Explained + Examples)"
-          intro="The mortgage overpayment limit UK borrowers most often face is around 10% of the outstanding balance each year on many fixed-rate deals. Go above that while charges still apply and you may face an early repayment charge, often called an ERC. Most UK lenders allow around 10%, but the exact mortgage overpayment allowance UK borrowers get still varies by deal, lender, and mortgage type."
+          title="Mortgage Overpayment Limit UK (10% Rule Explained + Real Examples)"
+          intro="Most UK mortgages allow around 10% of the outstanding balance to be overpaid each year without penalty during a fixed deal. Go above that mortgage overpayment limit UK rule and you may face an early repayment charge, often called an ERC. Some mortgages allow more and some allow less, so the exact overpayment allowance always depends on your lender and mortgage terms."
         />
       </Section>
 
       <Section className="pt-0" compact>
         <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <DirectAnswer answer="If you are asking how much can I overpay my mortgage UK deals by, the most common answer is around 10% a year on many fixed-rate mortgages. That 10% mortgage overpayment rule UK borrowers often hear about is usually based on the outstanding balance and usually resets yearly. But there is no single rule for every mortgage, which is why checking the exact mortgage overpayment limit UK lenders set in your own paperwork is so important." />
+          <DirectAnswer answer="If you are asking how much can I overpay my mortgage UK lenders normally allow, the most common answer is around 10% of your outstanding mortgage balance each year on many fixed-rate deals. That 10% mortgage overpayment rule UK borrowers often hear about usually resets yearly and usually applies only while the deal is still in its restricted period. If you go over it, an early repayment charge mortgage UK lenders call an ERC may apply." />
           <KeyPointsList title="Quick answer" items={keyTakeaways} />
         </div>
       </Section>
 
       <Section
         title="What Is the Mortgage Overpayment Limit in the UK?"
-        description="The mortgage overpayment limit UK borrowers deal with is simply the extra amount a lender allows before a charge may apply."
+        description="The mortgage overpayment limit UK borrowers talk about is the extra amount a lender lets you pay off without triggering a charge."
         compact
       >
         <div className="space-y-4 text-sm leading-7 text-slate-600">
           <p>
-            A mortgage overpayment allowance UK lenders set is a cap on how much extra you can pay on top of your normal
-            mortgage payments over a defined period. On many fixed-rate mortgages, that limit is around 10% of the outstanding
-            balance each mortgage year.
+            A mortgage overpayment allowance UK lenders set is the amount you can pay above your normal monthly mortgage
+            payment within a defined period. On many fixed-rate mortgages, that allowance is around <strong className="text-slate-950">10% of the outstanding balance each year</strong>.
           </p>
           <p>
-            Most UK lenders allow around 10%, which is why the rule is quoted so often, but it is not a law and it is not
-            universal. Some lenders allow more, some allow less, and some mortgages have much more flexibility than others.
+            That is why the phrase <strong className="text-slate-950">mortgage overpayment limit UK</strong> is so often tied to a simple 10% rule.
+            It is the benchmark many borrowers recognise first.
           </p>
           <p>
-            The important thing is that the mortgage overpayment limit UK borrowers talk about is not really one national rule.
-            It is a common product feature. That is why the practical answer always comes back to your own mortgage terms.
+            Most UK lenders allow around 10%, but the exact limit varies by lender, mortgage type, and deal terms. Some
+            mortgages are more flexible. Some are tighter. Some have no practical cap once a fixed period ends.
+          </p>
+          <p>
+            So the short answer is straightforward: the mortgage overpayment limit UK borrowers usually face is around 10%
+            a year, but your own mortgage offer is what counts.
+          </p>
+          <p>
+            This matters because overpaying can be a very effective way to reduce your balance faster, cut the total
+            interest you pay, and potentially become mortgage-free sooner. But it only works well if you understand how
+            your allowance actually works.
           </p>
         </div>
       </Section>
 
       <Section
         title="The 10% Mortgage Overpayment Rule Explained"
-        description="The 10% mortgage overpayment rule UK borrowers hear about is usually straightforward once you strip away the jargon."
+        description="The 10% mortgage overpayment rule UK borrowers hear about is simple once you strip away the jargon."
         compact
       >
         <div className="space-y-4 text-sm leading-7 text-slate-600">
           <p>
-            On many fixed-rate mortgages, you can usually overpay up to around 10% of the outstanding balance in a mortgage year
-            without paying an early repayment charge. The outstanding balance matters because the allowance is often worked out on
-            what you still owe, not on what the original mortgage used to be.
+            On many fixed-rate mortgages, you can overpay up to around 10% of the <strong className="text-slate-950">outstanding mortgage balance</strong> in
+            a mortgage year without paying an ERC.
           </p>
           <p>
-            The allowance usually resets yearly, but yearly does not always mean calendar year. Some lenders reset it on the
-            mortgage anniversary, some on the product anniversary, and others use their own mortgage year definition. That detail
-            matters because it affects how much room you really have left at any point.
+            The most important point is that the allowance is usually based on what you still owe, not what you originally
+            borrowed. So if your remaining balance is £180,000, a typical 10% allowance could mean you can overpay around
+            £18,000 in that mortgage year without penalty.
           </p>
           <p>
-            In practical terms, the 10% mortgage overpayment rule UK borrowers rely on is there to give some flexibility without
-            allowing unlimited capital repayments during a deal that was priced on the expectation you would stay longer.
+            The second important point is that the allowance usually <strong className="text-slate-950">resets yearly</strong>. That does not always mean a
+            calendar year. Some lenders use the mortgage anniversary, some use the product anniversary, and some define the
+            year in their own way.
           </p>
           <p>
-            The safest assumption is not that the allowance definitely works in a particular way. It is that you should confirm
-            exactly how your lender calculates it before sending a large overpayment.
+            The third point is that unused allowance usually <strong className="text-slate-950">cannot be carried over</strong>. If you do not use your full
+            allowance this year, you normally do not get to add the unused part to next year.
+          </p>
+          <p>
+            In real life, that means the <strong className="text-slate-950">10% mortgage overpayment rule UK</strong> borrowers rely on is a useful rule of
+            thumb, but not a substitute for checking the exact wording of your deal.
+          </p>
+          <p>
+            Most UK lenders allow around 10%, but the practical detail that matters is how your own lender measures the
+            year, tracks payments, and defines the balance used for the allowance.
           </p>
         </div>
       </Section>
 
       <Section
         title="Example Overpayment Limits (Real Numbers)"
-        description="The table below shows what a typical 10% mortgage overpayment allowance UK borrowers might see looks like in pounds."
+        description="The table below shows what a typical mortgage overpayment allowance UK borrowers might see looks like in real numbers."
         compact
       >
         <div className="overflow-x-auto card rounded-[2rem] px-5 py-5">
@@ -156,7 +172,7 @@ export default function OverpaymentLimitPage() {
             <thead>
               <tr className="border-b border-slate-200 text-slate-950">
                 <th className="py-2 pr-4 font-semibold">Mortgage Balance</th>
-                <th className="py-2 pr-4 font-semibold">10% Limit</th>
+                <th className="py-2 pr-4 font-semibold">10% Annual Limit</th>
                 <th className="py-2 font-semibold">Monthly Equivalent</th>
               </tr>
             </thead>
@@ -173,44 +189,76 @@ export default function OverpaymentLimitPage() {
         </div>
         <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
           <p>
-            These figures show why the mortgage overpayment limit UK borrowers ask about can sound generous on paper. But the
-            monthly equivalent is only a rough comparison. The lender usually cares about the yearly total, not whether you send
-            the money monthly or as one lump sum.
+            This is the easiest way to understand <strong className="text-slate-950">how much can I overpay my mortgage UK</strong> deals by. If your
+            remaining balance is £100,000, a typical 10% annual allowance could mean £10,000 of extra repayments in that
+            year. If your balance is £200,000, the allowance could be around £20,000. If it is £300,000, it could be
+            around £30,000.
           </p>
           <p>
-            So a £200,000 mortgage may have an allowance of around £20,000 in the year, but that does not mean you need to
-            spread it neatly at £1,666 a month. You could often use a mix of monthly overpayments and lump sums as long as the
-            total stays within the allowance.
+            The monthly equivalent is only a guide. Your lender usually cares about the yearly total, not whether you send
+            the money monthly or as one lump sum. So you could often use a mix of regular overpayments and one-off
+            payments, as long as the total stays within the annual limit.
           </p>
+          <p>
+            This is why some borrowers choose a steady monthly overpayment, while others wait for a bonus or savings build-up
+            and make one larger lump sum payment instead.
+          </p>
+          <div className="card rounded-[2rem] px-5 py-5">
+            <p className="text-sm font-semibold text-slate-950">
+              Use our calculator to see how much you could save by overpaying your mortgage.
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-600">
+              Try a monthly overpayment, a lump sum, or the full annual allowance and compare the effect on your mortgage
+              term, mortgage-free date, and total interest.
+            </p>
+            <Link
+              className="mt-3 inline-flex text-sm font-semibold text-teal-800 underline-offset-4 hover:underline"
+              href={ROUTES.calculator}
+            >
+              Open the mortgage overpayment calculator
+            </Link>
+          </div>
         </div>
       </Section>
 
       <Section
         title="What Happens If You Go Over the Limit?"
-        description="If you go above the mortgage overpayment allowance UK lenders set while charges still apply, you may face an ERC."
+        description="If you go above the mortgage overpayment allowance UK lenders set while charges still apply, you may have to pay an ERC."
         compact
       >
         <div className="space-y-4 text-sm leading-7 text-slate-600">
           <p>
-            An early repayment charge mortgage UK borrowers often see is usually a percentage fee. A typical range is around 1%
-            to 5%, although the exact level depends on the deal and how far through the fixed or discounted period you are.
+            An <strong className="text-slate-950">early repayment charge mortgage UK</strong> borrowers often see is usually a percentage fee. A typical range
+            is around <strong className="text-slate-950">1% to 5%</strong>, although the exact number depends on the deal and how far through the restricted
+            period you are.
           </p>
           <p>
-            In many cases, the early repayment charge mortgage UK lenders apply is charged only on the excess amount above the
-            allowance, not on the whole overpayment. So if your safe allowance is £10,000 and you overpay £12,000, the charge
-            may be worked out on the extra £2,000 rather than on the full £12,000.
+            In many cases, the ERC applies only to the amount <strong className="text-slate-950">above the limit</strong>, not to the whole overpayment. That
+            point matters because it helps you work out the real cost of exceeding your allowance.
+          </p>
+          <div className="card rounded-[2rem] px-5 py-5">
+            <p className="text-sm font-semibold text-slate-950">Example</p>
+            <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-600">
+              <li>£200,000 mortgage</li>
+              <li>£20,000 limit</li>
+              <li>£25,000 overpayment</li>
+              <li>ERC applies to £5,000 only</li>
+            </ul>
+          </div>
+          <p>
+            So if your lender charged 3% on the excess, the fee would be worked out on the £5,000 above the allowance, not
+            on the full £25,000. That still reduces the value of overpaying, which is why it is worth checking first.
           </p>
           <p>
-            That still matters. A fee can reduce the benefit of an overpayment and in some situations make it much less
-            attractive than it looked at first. This is why it is sensible to check the allowance before sending a larger lump
-            sum.
+            Going over the limit does not always mean overpaying is a bad idea, but it does mean you should compare the
+            likely interest saving with the likely charge before acting.
           </p>
         </div>
       </Section>
 
       <Section
         title="Mortgage Types and Overpayment Rules"
-        description="The answer changes a lot depending on the kind of mortgage deal you are on."
+        description="The answer changes a lot depending on the kind of mortgage deal you have."
         compact
       >
         <div className="space-y-6">
@@ -218,12 +266,12 @@ export default function OverpaymentLimitPage() {
             <h3 className="text-lg font-semibold text-slate-950">Fixed-rate mortgages</h3>
             <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600">
               <p>
-                Fixed-rate mortgages are the deals most likely to have a 10% cap. This is where the phrase mortgage overpayment
-                limit UK borrowers know best usually comes from.
+                Fixed-rate mortgages are the type most likely to have a <strong className="text-slate-950">10% cap</strong>. This is where the phrase
+                mortgage overpayment limit UK borrowers know best usually comes from.
               </p>
               <p>
-                During the fixed period, the lender often wants to limit how much of the capital can be repaid early without a
-                fee. That is why the 10% mortgage overpayment rule UK borrowers hear about is so commonly linked to fixed deals.
+                During the fixed period, lenders often allow overpayments but limit how much you can repay early without a
+                fee. That is why a 10% annual allowance is so common on fixed deals.
               </p>
             </div>
           </article>
@@ -232,8 +280,8 @@ export default function OverpaymentLimitPage() {
             <h3 className="text-lg font-semibold text-slate-950">Tracker mortgages</h3>
             <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600">
               <p>
-                Tracker mortgages often have much more flexibility, and some may allow unlimited overpayments. But often does
-                not mean always. Some tracker products still use restrictions, so the mortgage terms remain the deciding factor.
+                Tracker mortgages often have more flexibility and may have <strong className="text-slate-950">no overpayment limit</strong>, but you still need
+                to check the terms. Some trackers are flexible, while others still have restrictions.
               </p>
             </div>
           </article>
@@ -242,9 +290,8 @@ export default function OverpaymentLimitPage() {
             <h3 className="text-lg font-semibold text-slate-950">Standard variable rate (SVR)</h3>
             <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600">
               <p>
-                Standard variable rate mortgages are typically more flexible and often allow unlimited overpayments, but again it
-                is worth checking. If your fixed deal has ended and you have moved onto an SVR, the mortgage overpayment
-                allowance UK lenders gave you during the fixed period may no longer apply in the same way.
+                Standard variable rate mortgages are usually more flexible and often have <strong className="text-slate-950">no practical limit</strong> on
+                overpayments, but again the only reliable answer is the wording in your own mortgage conditions.
               </p>
             </div>
           </article>
@@ -253,29 +300,39 @@ export default function OverpaymentLimitPage() {
 
       <Section
         title="Can You Overpay More Than 10%?"
-        description="Yes, in some situations you can overpay more than 10% mortgage UK deals by, but only if the mortgage terms allow it."
+        description="Yes, but whether you can do it cheaply depends on the mortgage type and whether ERCs still apply."
         compact
       >
         <div className="space-y-4 text-sm leading-7 text-slate-600">
           <p>
-            The answer to can I overpay more than 10% mortgage UK deals by is sometimes yes. Some flexible mortgages allow more
-            than 10%. Some tracker or SVR products are much less restrictive. And once a fixed period ends, the old limit may
-            disappear or change completely.
+            The answer to <strong className="text-slate-950">can I overpay more than 10% mortgage UK</strong> deals by is sometimes yes. Some flexible
+            mortgages allow more than 10%. Some tracker or SVR mortgages may allow unlimited overpayments. And once a fixed
+            period ends, the old cap may disappear altogether.
           </p>
           <p>
-            This is one reason borrowers should not assume the 10% rule applies forever. The mortgage type, product stage, and
-            current lender terms all matter.
+            The practical catch is that if you are still inside a restricted period and your mortgage uses a 10% annual
+            allowance, going above it may trigger an ERC on the excess.
           </p>
           <p>
-            If you are close to the end of a fixed deal, it can also be worth checking whether it is better to wait until the
-            old restrictions fall away before making a large extra payment.
+            That means overpaying more than 10% is often possible, but not always sensible. The best time to consider a large
+            overpayment is often when:
+          </p>
+          <ul className="space-y-2 pl-5 text-sm leading-7 text-slate-600">
+            <li>your fixed deal is ending soon</li>
+            <li>you have moved to a more flexible mortgage type</li>
+            <li>your lender has confirmed no ERC applies</li>
+            <li>your mortgage is specifically designed to allow larger overpayments</li>
+          </ul>
+          <p>
+            If you are planning a big lump sum, it is worth checking whether waiting a little longer could move you into a
+            more flexible part of the mortgage and save you a charge.
           </p>
         </div>
       </Section>
 
       <Section
         title="Monthly vs Lump Sum Overpayments"
-        description="Both monthly and lump sum overpayments can work, but both often count towards the same mortgage overpayment allowance UK lenders track."
+        description="Both methods can work well, and both usually count toward the same annual allowance."
         compact
       >
         <div className="grid gap-4 lg:grid-cols-2">
@@ -283,8 +340,11 @@ export default function OverpaymentLimitPage() {
             <h3 className="text-lg font-semibold text-slate-950">Monthly overpayments</h3>
             <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600">
               <p>
-                Regular monthly overpayments can be easier to budget for and easier to track through the year. They often work
-                well if you want to use part of the allowance steadily rather than making one big decision.
+                Monthly overpayments are small extra amounts added to your normal payment. They are often easier to budget for
+                and easier to keep going consistently.
+              </p>
+              <p>
+                They work well if you want to reduce the balance steadily without making one large decision in one go.
               </p>
             </div>
           </article>
@@ -293,30 +353,37 @@ export default function OverpaymentLimitPage() {
             <h3 className="text-lg font-semibold text-slate-950">Lump sum overpayments</h3>
             <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600">
               <p>
-                Lump sums can be useful after a bonus, inheritance, or a build-up of savings. But they often count towards the
-                same yearly total, so they need to be checked against any previous monthly overpayments you have already made.
+                Lump sum overpayments are one-off payments, often made from savings, a bonus, or another windfall. They can
+                make a bigger immediate dent in the mortgage balance.
+              </p>
+              <p>
+                They work well if your spare money comes in larger chunks rather than month by month.
               </p>
             </div>
           </article>
         </div>
         <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
           <p>
-            In other words, the lender often looks at the total extra repaid in the mortgage year rather than treating monthly
-            and lump sum overpayments as separate allowances.
+            The main practical point is simple: monthly and lump sum overpayments usually count towards the same
+            <strong className="text-slate-950"> annual mortgage overpayment allowance UK</strong> lenders track.
+          </p>
+          <p>
+            So if you have already been paying an extra £200 a month and then decide to make a £5,000 lump sum payment, both
+            amounts normally need to be counted together when checking whether you are still inside the yearly limit.
           </p>
         </div>
       </Section>
 
       <Section
         title="How to Check Your Overpayment Limit"
-        description="If you want the real answer for your mortgage overpayment limit UK terms, these are the places to check."
+        description="If you want the real answer for your own mortgage, these are the three places to check first."
         compact
       >
         <ul className="space-y-4">
           {[
-            "Your mortgage offer or product terms, where the overpayment allowance is often written clearly.",
-            "Your annual statement, which may show the product and the current deal details.",
-            "Your lender directly, if the wording is unclear or you want confirmation before sending a large payment.",
+            "Your mortgage offer document, where the overpayment allowance and ERC wording are often set out clearly.",
+            "Your annual mortgage statement, which may show the current deal details and any overpayments already made.",
+            "Your lender directly, if you want confirmation before making a larger monthly or lump sum overpayment.",
           ].map((item) => (
             <li key={item} className="card rounded-[2rem] px-5 py-5 text-sm leading-7 text-slate-700">
               <span className="flex gap-3">
@@ -326,56 +393,84 @@ export default function OverpaymentLimitPage() {
             </li>
           ))}
         </ul>
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            If the wording is unclear, ask direct questions. For example: what is my current annual allowance, when does it
+            reset, and would this exact payment trigger an ERC?
+          </p>
+          <p>
+            That is often the quickest way to remove uncertainty before you act.
+          </p>
+        </div>
       </Section>
 
       <Section
         title="How to Avoid Early Repayment Charges"
-        description="The best way to avoid an early repayment charge mortgage UK borrowers face is to treat the allowance as a plan, not just a headline number."
+        description="The safest way to avoid an ERC is to plan your overpayments rather than treating the allowance as a rough guess."
         compact
       >
-        <div className="space-y-4 text-sm leading-7 text-slate-600">
+        <ul className="space-y-4 text-sm leading-7 text-slate-600">
+          <li>
+            <strong className="text-slate-950">Stay within the 10% allowance.</strong> If your mortgage uses a 10% rule, keep a running total of
+            all monthly and lump sum overpayments together.
+          </li>
+          <li>
+            <strong className="text-slate-950">Check the reset date.</strong> The allowance usually resets yearly, but not always on 1 January.
+          </li>
+          <li>
+            <strong className="text-slate-950">Time payments across years if needed.</strong> In some cases, splitting a larger overpayment across
+            two allowance years can avoid a charge.
+          </li>
+          <li>
+            <strong className="text-slate-950">Confirm the details before paying.</strong> A quick check with the lender can stop an avoidable ERC.
+          </li>
+        </ul>
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
           <p>
-            Stay within the allowance if you want the safest route. If your mortgage allows around 10%, track all extra payments
-            together rather than looking at each one in isolation.
+            Most UK lenders allow around 10%, but the small details matter. A payment made a few days earlier or later can
+            sometimes make the difference between staying inside the allowance and triggering a fee.
           </p>
           <p>
-            Time larger payments around the reset date if that gives you more flexibility. In some cases, splitting overpayments
-            across two mortgage years can avoid a fee and still achieve most of the same result.
-          </p>
-          <p>
-            The key is not rushing. A day or two spent checking the reset date, allowance basis, and current product terms can
-            protect you from a charge that did not need to happen.
+            That is why borrowers making a larger overpayment often plan around the reset date rather than just around when
+            they happen to have the cash available.
           </p>
         </div>
       </Section>
 
       <Section
         title="Use Our Mortgage Overpayment Calculator"
-        description="Once you know your mortgage overpayment allowance UK terms, the next step is to see what that level of extra payment could actually achieve."
+        description="Knowing the limit is useful, but seeing the likely saving is what turns the rule into a real decision."
         compact
       >
         <div className="space-y-4 text-sm leading-7 text-slate-600">
           <p>
             Use our{" "}
-            <Link className="text-teal-800 font-semibold underline-offset-4 hover:underline" href={ROUTES.calculator}>
+            <Link className="font-semibold text-teal-800 underline-offset-4 hover:underline" href={ROUTES.calculator}>
               mortgage overpayment calculator
             </Link>{" "}
-            to estimate how much interest and time you could save by overpaying your mortgage. It is the fastest way to compare
-            a monthly overpayment with a lump sum and see whether using more of your allowance looks worthwhile.
+            to see how much you could save by overpaying your mortgage. You can test regular monthly overpayments, one-off
+            lump sums, or the full annual allowance and compare the results.
           </p>
           <p>
-            Once you have the likely saving in front of you, it is much easier to judge whether you want to use a little of the
-            allowance, most of it, or none of it at all.
+            This helps you move from “what is my mortgage overpayment limit UK allowance?” to “what difference would using it
+            actually make?”
+          </p>
+          <p>
+            If you want a quick practical next step, try a realistic overpayment amount first, then compare it with a bigger
+            figure to see whether the extra saving feels worth it.
           </p>
         </div>
       </Section>
 
-      <Section title="Useful next steps" description="These guides go one level deeper once you understand the mortgage overpayment limit UK rules." compact>
+      <Section title="Useful next steps" description="These guides help once you understand the limit and want to decide what to do with it." compact>
         <InternalLinkBlock links={relatedLinks} />
       </Section>
 
-      <Section title="Important note" description="This page is designed to be factual, useful, and practical rather than promotional." compact>
-        <TrustNote children="This is general guidance only. Most UK lenders allow around 10%, but your own mortgage terms are what count. Always check the mortgage offer, annual statement, or lender confirmation before making a larger extra payment." />
+      <Section title="Important note" description="This page is designed to be clear, practical, and factual rather than promotional." compact>
+        <TrustNote>
+          This is general guidance only. Most UK lenders allow around 10% during a fixed period, but lender terms vary. Always
+          check your mortgage offer, annual statement, or lender confirmation before making a larger overpayment.
+        </TrustNote>
       </Section>
 
       <FAQSection
@@ -387,7 +482,7 @@ export default function OverpaymentLimitPage() {
 
       <CTASection
         title="Use our calculator to see how much you could save by overpaying your mortgage"
-        description="Test a realistic overpayment amount, compare monthly and lump sum options, and see what your mortgage overpayment allowance could mean in real numbers."
+        description="Test monthly and lump sum scenarios, compare realistic figures, and see what your mortgage overpayment allowance could mean in pounds and time saved."
         compact
       />
     </>
