@@ -32,8 +32,17 @@ const faqs = getFaqs("overpaymentLimit")
 
 const keyTakeaways = [
   "Most UK lenders allow around 10% of the outstanding mortgage balance to be overpaid each year during a fixed deal.",
+  "This allowance is usually based on the balance at the start of the allowance period and usually resets yearly.",
   "If you go above that allowance while charges still apply, an early repayment charge may be added.",
   "The exact mortgage overpayment allowance UK borrowers get depends on the mortgage type, lender terms, and reset date.",
+]
+
+const finalTakeaways = [
+  "Most mortgages allow around 10% overpayment each year during a fixed-rate deal.",
+  "Going above the allowance may trigger an early repayment charge on the excess.",
+  "Fixed deals usually have limits, while tracker and variable deals are often more flexible.",
+  "The allowance usually resets yearly and unused allowance usually cannot be rolled forward.",
+  "Always check your mortgage terms before making a larger overpayment.",
 ]
 
 const exampleRows = [
@@ -88,6 +97,33 @@ export default function OverpaymentLimitPage() {
           title="Mortgage Overpayment Limit UK (10% Rule Explained + Real Examples)"
           intro="Most UK mortgages allow around 10% of the outstanding balance to be overpaid each year without penalty during a fixed deal. Go above that mortgage overpayment limit UK rule and you may face an early repayment charge, often called an ERC. Some mortgages allow more and some allow less, so the exact overpayment allowance always depends on your lender and mortgage terms."
         />
+      </Section>
+
+      <Section className="pt-0" compact>
+        <Section
+          title="Quick Answer"
+          description="If you want the shortest version first, these are the points that matter most."
+          compact
+        >
+          <ul className="space-y-3 text-sm leading-7 text-slate-600">
+            <li>
+              <strong className="text-slate-950">Most UK mortgages allow up to 10% overpayment per year</strong> during a fixed
+              deal.
+            </li>
+            <li>
+              <strong className="text-slate-950">This is usually based on your outstanding balance</strong>, not the amount you
+              originally borrowed.
+            </li>
+            <li>
+              <strong className="text-slate-950">Going over the limit may trigger early repayment charges</strong>, often called
+              ERCs.
+            </li>
+            <li>
+              <strong className="text-slate-950">Limits vary depending on your mortgage type</strong>, so always check your
+              mortgage terms before making a larger payment.
+            </li>
+          </ul>
+        </Section>
       </Section>
 
       <Section className="pt-0" compact>
@@ -148,6 +184,11 @@ export default function OverpaymentLimitPage() {
             year in their own way.
           </p>
           <p>
+            In most cases, the lender works out the allowance using the <strong className="text-slate-950">outstanding balance at the start of that
+            allowance period</strong>. That means your 10% allowance is usually set from a starting figure rather than changing every
+            time the balance moves during the year.
+          </p>
+          <p>
             The third point is that unused allowance usually <strong className="text-slate-950">cannot be carried over</strong>. If you do not use your full
             allowance this year, you normally do not get to add the unused part to next year.
           </p>
@@ -158,6 +199,32 @@ export default function OverpaymentLimitPage() {
           <p>
             Most UK lenders allow around 10%, but the practical detail that matters is how your own lender measures the
             year, tracks payments, and defines the balance used for the allowance.
+          </p>
+        </div>
+      </Section>
+
+      <Section
+        title="Real Example: How the 10% Overpayment Limit Works"
+        description="A simple example makes the 10% rule much easier to understand."
+        compact
+      >
+        <div className="space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            Imagine your mortgage balance is <strong className="text-slate-950">£200,000</strong>. If your lender allows 10% overpayment in the year,
+            your mortgage overpayment allowance would usually be <strong className="text-slate-950">£20,000</strong>.
+          </p>
+          <p>
+            If you then make an overpayment of <strong className="text-slate-950">£25,000</strong>, the first <strong className="text-slate-950">£20,000</strong> would normally fall within
+            the allowance and would usually not trigger a charge.
+          </p>
+          <p>
+            The remaining <strong className="text-slate-950">£5,000</strong> would be the part above the limit. In most cases, that is the amount the ERC
+            would be calculated on.
+          </p>
+          <p>
+            In other words, the charge usually applies only to the <strong className="text-slate-950">excess</strong>, not to the full overpayment. That is an
+            important detail because it makes the rule less confusing and helps you estimate the real cost of going over your
+            limit.
           </p>
         </div>
       </Section>
@@ -230,7 +297,8 @@ export default function OverpaymentLimitPage() {
           <p>
             An <strong className="text-slate-950">early repayment charge mortgage UK</strong> borrowers often see is usually a percentage fee. A typical range
             is around <strong className="text-slate-950">1% to 5%</strong>, although the exact number depends on the deal and how far through the restricted
-            period you are.
+            period you are. In most cases, it applies during the fixed-rate period or another part of the deal where early
+            repayment charges still apply.
           </p>
           <p>
             In many cases, the ERC applies only to the amount <strong className="text-slate-950">above the limit</strong>, not to the whole overpayment. That
@@ -248,6 +316,10 @@ export default function OverpaymentLimitPage() {
           <p>
             So if your lender charged 3% on the excess, the fee would be worked out on the £5,000 above the allowance, not
             on the full £25,000. That still reduces the value of overpaying, which is why it is worth checking first.
+          </p>
+          <p>
+            As another simple example, a <strong className="text-slate-950">2% ERC on £5,000 would cost £100</strong>. That is why many borrowers prefer to
+            stay inside the allowance unless they have checked that going over still makes financial sense.
           </p>
           <p>
             Going over the limit does not always mean overpaying is a bad idea, but it does mean you should compare the
@@ -326,6 +398,34 @@ export default function OverpaymentLimitPage() {
           <p>
             If you are planning a big lump sum, it is worth checking whether waiting a little longer could move you into a
             more flexible part of the mortgage and save you a charge.
+          </p>
+        </div>
+      </Section>
+
+      <Section
+        title="Important Edge Cases Most People Miss"
+        description="A few practical details can change how the mortgage overpayment limit works in real life."
+        compact
+      >
+        <div className="space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            <strong className="text-slate-950">At the end of a fixed-rate deal:</strong> overpayments usually become much more flexible once the deal ends.
+            In most cases, the old cap no longer applies in the same way, and overpayments may become unlimited if you move
+            onto a more flexible rate.
+          </p>
+          <p>
+            <strong className="text-slate-950">If you switch mortgage deals mid-year:</strong> the allowance may reset, change, or be replaced with a new
+            overpayment rule depending on the lender and the new product. Always check your mortgage terms rather than
+            assuming the old allowance carries across neatly.
+          </p>
+          <p>
+            <strong className="text-slate-950">If your mortgage has multiple parts:</strong> each part may have its own balance, rate, and overpayment
+            limit. In that situation, the mortgage overpayment allowance UK borrowers see on one part may not be the same on
+            another.
+          </p>
+          <p>
+            These edge cases are easy to miss, especially if you are focused only on the headline 10% rule. A quick check
+            before making a larger payment can remove a lot of uncertainty.
           </p>
         </div>
       </Section>
@@ -448,8 +548,8 @@ export default function OverpaymentLimitPage() {
             <Link className="font-semibold text-teal-800 underline-offset-4 hover:underline" href={ROUTES.calculator}>
               mortgage overpayment calculator
             </Link>{" "}
-            to see how much you could save by overpaying your mortgage. You can test regular monthly overpayments, one-off
-            lump sums, or the full annual allowance and compare the results.
+            to see exactly how much you can overpay without triggering charges and how much interest you could save. You can
+            test regular monthly overpayments, one-off lump sums, or the full annual allowance and compare the results.
           </p>
           <p>
             This helps you move from “what is my mortgage overpayment limit UK allowance?” to “what difference would using it
@@ -471,6 +571,16 @@ export default function OverpaymentLimitPage() {
           This is general guidance only. Most UK lenders allow around 10% during a fixed period, but lender terms vary. Always
           check your mortgage offer, annual statement, or lender confirmation before making a larger overpayment.
         </TrustNote>
+      </Section>
+
+      <Section title="Key Takeaways" description="If you only want the main points to remember, focus on these." compact>
+        <ul className="space-y-3 text-sm leading-7 text-slate-600">
+          {finalTakeaways.map((item) => (
+            <li key={item}>
+              <strong className="text-slate-950">{item}</strong>
+            </li>
+          ))}
+        </ul>
       </Section>
 
       <FAQSection
