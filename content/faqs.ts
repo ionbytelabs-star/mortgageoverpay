@@ -72,24 +72,29 @@ export const FAQS_BY_PAGE = {
   ],
   overpaymentLimit: [
     {
-      question: "What is an overpayment limit?",
+      question: "What is the 10% mortgage overpayment rule UK?",
       answer:
-        "It is a cap written into some mortgage terms that limits how much extra you can repay without a charge during a set period.",
+        "The 10% mortgage overpayment rule usually means you can overpay up to around 10% of your outstanding mortgage balance in a mortgage year without an early repayment charge. It is common on fixed-rate deals, but it is not universal.",
     },
     {
-      question: "Do all mortgages have the same limit?",
+      question: "Can I overpay my mortgage by more than 10%?",
       answer:
-        "No. Limits vary, so the only safe approach is to check your own mortgage terms before making larger overpayments or lump sums.",
+        "Sometimes, yes. Some tracker, flexible, or standard variable rate mortgages may allow more than 10%, and some borrowers gain more freedom once a fixed period ends. The exact answer depends on the mortgage terms.",
     },
     {
-      question: "Does the 10% rule apply to every UK mortgage?",
+      question: "Do all mortgages have overpayment limits?",
       answer:
-        "No. The 10% rule is common on some fixed-rate mortgages, but it is not universal. Some deals allow more flexibility and others use different rules altogether.",
+        "No. Many fixed-rate mortgages do, but some tracker and standard variable rate mortgages may allow much more freedom. You should always check the mortgage offer or latest terms rather than assuming.",
     },
     {
-      question: "Do monthly overpayments and lump sums count towards the same allowance?",
+      question: "Are overpayments counted monthly or yearly?",
       answer:
-        "They often do. On many mortgages, all extra payments made during the relevant mortgage year count towards the same overpayment limit.",
+        "On many mortgages, the allowance is measured over a mortgage year, not month by month. Monthly overpayments and lump sums often count towards the same yearly total.",
+    },
+    {
+      question: "What happens if I exceed my allowance?",
+      answer:
+        "If you go above the mortgage overpayment allowance while early repayment charges apply, the lender may charge an ERC. That charge is often a percentage of the amount above the limit rather than the whole overpayment.",
     },
   ],
   payOffEarly: [
