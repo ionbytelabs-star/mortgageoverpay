@@ -259,6 +259,13 @@ export default function HomePage() {
             .
           </p>
           <p>
+            If you are mainly trying to work out{" "}
+            <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.overpaymentLimit}>
+              how much you can overpay
+            </Link>{" "}
+            before a charge kicks in, that guide explains the usual 10% limit in a simple, practical way.
+          </p>
+          <p>
             If you are planning a larger extra payment, it makes sense to check the limit before doing the maths. There is
             little value in seeing a strong saving in the calculator if a charge would reduce the benefit in practice.
           </p>

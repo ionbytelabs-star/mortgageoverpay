@@ -122,6 +122,13 @@ export default function GuidesPage() {
           <p className="text-base leading-7 text-slate-600 sm:text-lg">
             Pick the topic that matches your situation and get straight answers to help you decide what to do next.
           </p>
+          <p className="max-w-5xl text-sm leading-7 text-slate-600">
+            If you want a clearer answer on{" "}
+            <Link className="text-teal-800 underline-offset-4 hover:underline" href={ROUTES.overpaymentLimit}>
+              mortgage overpayment limits
+            </Link>{" "}
+            or the usual 10% mortgage overpayment rule, start there before comparing the wider overpayment guides.
+          </p>
         </div>
 
         <div className="grid gap-4 lg:grid-cols-3">

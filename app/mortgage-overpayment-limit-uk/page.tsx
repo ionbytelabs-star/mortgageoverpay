@@ -538,6 +538,49 @@ export default function OverpaymentLimitPage() {
       </Section>
 
       <Section
+        title="How Much Can You Overpay Without Penalty?"
+        description="In most cases, the answer depends on your current balance, your mortgage type, and the lender rules that apply to your deal."
+        compact
+      >
+        <div className="overflow-x-auto card rounded-[2rem] px-5 py-5">
+          <table className="min-w-full text-left text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="border-b border-slate-200 text-slate-950">
+                <th className="py-2 pr-4 font-semibold">Mortgage balance</th>
+                <th className="py-2 font-semibold">Typical 10% annual overpayment limit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["£100,000", "£10,000"],
+                ["£200,000", "£20,000"],
+                ["£250,000", "£25,000"],
+                ["£300,000", "£30,000"],
+              ].map(([balance, limit]) => (
+                <tr key={balance} className="border-b border-slate-100 last:border-b-0">
+                  <td className="py-3 pr-4 font-medium text-slate-950">{balance}</td>
+                  <td className="py-3">{limit}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
+          <p>
+            In most cases, your exact limit depends on your current mortgage balance, mortgage type and lender rules. The
+            safest approach is to check your mortgage terms before making a large overpayment.
+          </p>
+          <p>
+            Use our{" "}
+            <Link className="font-semibold text-teal-800 underline-offset-4 hover:underline" href={ROUTES.home}>
+              mortgage overpayment calculator
+            </Link>{" "}
+            to test your own numbers and see how much interest you could save.
+          </p>
+        </div>
+      </Section>
+
+      <Section
         title="Use Our Mortgage Overpayment Calculator"
         description="Knowing the limit is useful, but seeing the likely saving is what turns the rule into a real decision."
         compact
