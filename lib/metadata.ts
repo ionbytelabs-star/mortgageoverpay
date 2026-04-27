@@ -16,9 +16,11 @@ export function absoluteUrl(path: string) {
 
 export function buildMetadata({ title, description, path }: MetadataInput): Metadata {
   const url = absoluteUrl(path)
+  const titleSuffix = ` | ${SITE_NAME}`
+  const pageTitle = title.endsWith(titleSuffix) ? title.slice(0, -titleSuffix.length) : title
 
   return {
-    title,
+    title: pageTitle,
     description,
     metadataBase,
     alternates: {
