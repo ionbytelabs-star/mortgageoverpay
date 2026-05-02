@@ -231,6 +231,16 @@ export default function OverpayVsSavePage() {
             stress or borrowing, building savings is usually more urgent than shaving interest off the mortgage.
           </p>
           <p>
+            For buyers who have not completed yet, keeping cash aside for{" "}
+            <a
+              href="https://truehomecosts.co.uk/"
+              className="text-teal-800 underline-offset-4 hover:underline"
+            >
+              deposit, stamp duty, legal fees and moving costs
+            </a>{" "}
+            may matter more than planning future mortgage overpayments.
+          </p>
+          <p>
             It can also make more sense when savings rates are competitive and you know the money may be needed in the next few
             years. Keeping the money accessible can be more valuable than using it for an irreversible mortgage overpayment.
           </p>

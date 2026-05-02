@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 import { CTASection } from "@/components/common/CTASection"
 import { FAQSection } from "@/components/common/FAQSection"
 import { TrustNote } from "@/components/common/TrustNote"

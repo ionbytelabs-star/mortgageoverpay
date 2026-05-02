@@ -56,6 +56,16 @@ export default function HomePage() {
                   Designed for UK repayment mortgages, it helps you estimate interest saved, time saved, and how a monthly
                   overpayment or lump sum could change your mortgage-free date.
                 </p>
+                <p className="max-w-2xl text-sm leading-7 text-slate-500 sm:text-base">
+                  If you are still planning a purchase rather than already managing a mortgage, it is worth understanding the{" "}
+                  <a
+                    href="https://truehomecosts.co.uk/"
+                    className="text-teal-800 underline-offset-4 hover:underline"
+                  >
+                    full upfront cost of buying a home
+                  </a>{" "}
+                  before thinking about overpayments.
+                </p>
                 <p className="max-w-2xl text-base leading-7 text-slate-500">{STRAPLINE}</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">

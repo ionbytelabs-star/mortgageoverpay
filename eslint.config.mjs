@@ -1,16 +1,28 @@
-import { defineConfig, globalIgnores } from "eslint/config"
-import nextVitals from "eslint-config-next/core-web-vitals.js"
-import nextTs from "eslint-config-next/typescript.js"
+import path from "node:path"
+import { fileURLToPath } from "node:url"
 
-const eslintConfig = defineConfig(
-  nextVitals,
-  nextTs,
+import { FlatCompat } from "@eslint/eslintrc"
+import { defineConfig, globalIgnores } from "eslint/config"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+})
+
+export default defineConfig([
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      "react/no-children-prop": "off",
+      "react/no-unescaped-entities": "off",
+    },
+  },
   globalIgnores([
     ".next/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
   ]),
-)
-
-export default eslintConfig
+])
